@@ -8,7 +8,10 @@ const Banner = () => {
       <div className="container mx-auto text-center">
         <h1 className="text-4xl mb-4">Freshness in Every Bite</h1>
         <p className="mb-8">Jimney's Fish & Chips brings you the freshest and tastiest meals.</p>
-          <button className="bg-white text-orange-500 py-2 px-4 rounded">Order Now</button>
+        <Link to="/order">
+            <button className="bg-white text-orange-500 py-2 px-4 rounded">Order Now</button>
+        </Link>
+
       </div>
     </section>
   );
