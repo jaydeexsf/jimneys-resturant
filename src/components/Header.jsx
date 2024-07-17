@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <header className="bg-green-600 p-4">
+    <header className="bg-green-600 p-4 ">
       <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-white text-2xl">Jimney's Fish & Chips</h1>
+        <h1 className="text-white text-2xl">Jimney's</h1>
         <nav>
           <Link to="/" className="text-white mx-2">Home</Link>
           <Link to="/menu" className="text-white mx-2">Menu</Link>

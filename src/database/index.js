@@ -4,7 +4,7 @@ const menuItems = [
       name: 'Champion Burger',
       price: 24.99,
       category: 'Burgers',
-      imageUrl: '/assets/images/champion-burger.jpg',
+      imageUrl: 'src/assets/images/burger-chips-chicken.jpg',
       description: 'A delicious chicken burger with fresh lettuce, tomato, and sauce.',
     },
     {
@@ -12,7 +12,7 @@ const menuItems = [
       name: 'Burger, Chips & Chicken Piece',
       price: 54.99,
       category: 'Combos',
-      imageUrl: '/assets/images/burger-chips-chicken.jpg',
+      imageUrl: 'src/assets/images/burger-chips-chicken.jpg',
       description: 'A combo meal with a chicken burger, chips, and a piece of chicken.',
     },
     {
@@ -20,7 +20,7 @@ const menuItems = [
       name: 'Chicken & Chips',
       price: 40.00,
       category: 'Combos',
-      imageUrl: '/assets/images/chicken-chips.jpg',
+      imageUrl: 'src/assets/images/chicken-chips.jpg',
       description: 'A meal with crispy fried chicken and chips.',
     },
     {
@@ -28,8 +28,32 @@ const menuItems = [
       name: 'Chicken & Pap',
       price: 29.99,
       category: 'Meals',
-      imageUrl: '/assets/images/chicken-pap.jpg',
+      imageUrl: 'src/assets/images/chicken-pap.jpg',
       description: 'A meal with fried chicken and pap.',
+    },
+    {
+      id: 5,
+      name: 'Chicken Biryani',
+      price: 39.99,
+      category: 'Meals',
+      imageUrl: 'src/assets/images/Chicken-Briyani.jpg',
+      description: 'A meal with with a rice, chicken and spices',
+    },
+    {
+      id: 6,
+      name: 'Russion Meal',
+      price: 34.99,
+      category: 'Meals',
+      imageUrl: 'src/assets/images/Russian-Meal.jpg',
+      description: 'A meal with Chips and Russion',
+    },
+    {
+      id: 7,
+      name: 'Fish and Chips',
+      price: 49.99,
+      category: 'Meals',
+      imageUrl: 'src/assets/images/fishandchips.jpg',
+      description: 'A meal with fish and chips.',
     }
   ];
   
