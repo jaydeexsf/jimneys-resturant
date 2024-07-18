@@ -4,7 +4,7 @@ const menuItems = [
       name: 'Champion Burger',
       price: 24.99,
       category: 'Burgers',
-      imageUrl: 'src/assets/images/burger-chips-chicken.jpg',
+      imageUrl: 'src/assets/images/Kyllingeburger-med-fritter-scaled-removebg-preview.png',
       description: 'A delicious chicken burger with fresh lettuce, tomato, and sauce.',
     },
     {
@@ -54,7 +54,15 @@ const menuItems = [
       category: 'Meals',
       imageUrl: 'src/assets/images/fishandchips.jpg',
       description: 'A meal with fish and chips.',
-    }
+    },
+    // {
+    //   id: 8,
+    //   name: 'Russion Meal',
+    //   price: 34.99,
+    //   category: 'Meals',
+    //   imageUrl: 'src/assets/images/russion.jpg',
+    //   description: 'A meal with russion and chips.',
+    // }
   ];
   
   export default menuItems;
