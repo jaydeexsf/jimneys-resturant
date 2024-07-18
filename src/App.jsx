@@ -11,8 +11,9 @@ import Location from './pages/Location';
 function App() {
   return (
     <Router>
-        <div>
-          <Header />
+         <div>
+         <div className='bg-red-700 w-[100%] h-[2vh]'></div>
+          <Header className="fixed top-0 left-0 z-20 right-0"/>
           {/* <Home /> */}
           <main>
             <Routes>
