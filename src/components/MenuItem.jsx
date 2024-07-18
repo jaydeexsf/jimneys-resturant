@@ -14,12 +14,12 @@ const MenuItem = ({ item }) => {
   
 
   return (
-    <div className="border relative shadow bg-gray-950 flex flex-col justify-between p-4 rounded">
+    <div className="relative shadow bg-gray-950 flex flex-col justify-between p-4 rounded">
       <img src={item.imageUrl} alt={item.name} className="w-full h-[72] object-cover mb-4" />
       <div className='bg-white-500 flex-end'>
       <h3 className="text-xl font-bold">{item.name}</h3>
       <p className="text-gray-600 mb-2">{item.description}</p>
-      <p style={price} className="text-green-600 text-[20px] font-bold">R{item.price}</p>
+      <p style={price} className="text-white text-[20px] font-bold">R{item.price}</p>
       </div>
     </div>
   );
