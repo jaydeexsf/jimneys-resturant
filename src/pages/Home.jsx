@@ -4,6 +4,7 @@ import MenuItem from '../components/MenuItem';
 import menuItems from '../database/index';
 import { Contact } from '../components/Contact';
 import { AboutUs } from '../components/AboutUs';
+import Footer from '../components/Footer';
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
           ))}
         </div>   
       </section>
+      <Footer />
     </div>
   );
 };
