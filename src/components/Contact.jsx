@@ -3,9 +3,6 @@ import { IoCallOutline } from "react-icons/io5";
 import { MdOutlineEmail } from "react-icons/md";
 import { MdAccessTime } from "react-icons/md";
 
-
-
-
 export const Contact = () => {
   return (
     <div className='bg-red-700 border-lime-500 width-[100%] flex items-center justify-center gap-16 h-16'>
