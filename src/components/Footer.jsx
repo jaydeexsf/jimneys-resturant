@@ -19,9 +19,9 @@ function Footer() {
 
       <div className="text-left flex flex-col md:flex-row md:justify-between w-full md:w-[80%]">
         <div className="links mb-4 md:mb-0">
-          <h1 className='mb-6'>Quik Links</h1>
+          <h1 className='mb-6 text-red-700'>Quik Links</h1>
           <div>
-            <span className="block mb-2"><IoIosArrowForward className="inline mr-2" />Home</span>
+            <span className="block mb-2  hover:cursor-pointer hover:text-gray-950"><IoIosArrowForward className="inline mr-2" />Home</span>
             <span className="block mb-2"><IoIosArrowForward className="inline mr-2" />Services</span>
             <span className="block mb-2"><IoIosArrowForward className="inline mr-2" />Menu</span>
           </div>  
