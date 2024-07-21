@@ -1,7 +1,7 @@
 import React from 'react';
 import MenuItem from '../components/MenuItem';
 import menuItems from '../database';
-import Banner from '../components/Banner';
+// import Banner from '../components/Banner';
 // import { gsap } from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 
