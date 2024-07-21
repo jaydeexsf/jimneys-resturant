@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import data from '../database/index';
 // import { Contact } from './Contact';
 // import Contact from '../components/Contact';
-
+import { Button } from './Button';
+import { Button2 } from './Button2';
 
 const Banner = () => {
 
@@ -23,12 +24,14 @@ const Banner = () => {
         At Jimney's Fish & Chips, we bring you a delightful harmony of timeless flavors infused with contemporary culinary flair. Nestled conveniently in the vibrant heart of Mankweng, adjacent to the University of Limpopo and just a stone's throw from the local garage, our restaurant stands as a beacon of exceptional taste and warm hospitality.
         </p>
         <div className="flex">
-        <Link to="/order">
+        {/* <Link to="/order">
             <button className="bg-white border hover:border hover:text-white hover:bg-transparent hover:animate-pulse text-red-700 py-2 px-4 rounded-sm">Order  now</button>
         </Link>
         <Link to="/menu">
             <button className="bg-transparent border hover:text-red-700 ml-[20px] text-white py-2 px-4 rounded-sm">View menu</button>
-        </Link>
+        </Link> */}
+        <Button fist={"Order Now"} second={"Thank Us Later"}/>
+        <Button2 fist={"View Menu"}/>
         </div>
       </div>
     </section>
