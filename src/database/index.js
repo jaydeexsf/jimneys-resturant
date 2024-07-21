@@ -55,6 +55,15 @@ const menuItems = [
       imageUrl: 'src/assets/images/fishandchips.jpg',
       description: 'A meal with fish and chips.',
     },
+    {
+      id: 8,
+      name: "Dates",
+      price: 189,
+      category: "sunnah",
+      imageUrl: 'src/assets/images/dates.png',
+      description: 'Natural sweetness, rich in nutrients. Perfect for sunnah, iftar, and healthy snacking. Sustainably sourced.',
+
+    }
     // {
     //   id: 8,
     //   name: 'Russion Meal',

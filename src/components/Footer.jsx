@@ -6,10 +6,6 @@ import { FaInstagram } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
-
-
-
-
 function Footer() {
   return (
     <div className='flex flex-col text-lg items-center py-8 bg-black text-white'>
@@ -21,21 +17,21 @@ function Footer() {
         <div className="links mb-4 md:mb-0">
           <h1 className='mb-6 text-red-700'>Quik Links</h1>
           <div>
-            <span className="block mb-2  hover:cursor-pointer hover:text-gray-950"><IoIosArrowForward className="inline mr-2" />Home</span>
-            <span className="block mb-2"><IoIosArrowForward className="inline mr-2" />Services</span>
-            <span className="block mb-2"><IoIosArrowForward className="inline mr-2" />Menu</span>
+            <span className="block mb-2  "><IoIosArrowForward className="inline mr-2" /><span className="hover:cursor-pointer hover:text-gray-600">home</span></span>
+            <span className="block mb-2"><IoIosArrowForward className="inline mr-2" /><span className="hover:cursor-pointer hover:text-gray-600">services</span></span>
+            <span className="block mb-2"><IoIosArrowForward className="inline mr-2" /><span className="hover:cursor-pointer hover:text-gray-600">menu</span></span>
           </div>  
         </div>
 
         <div className="contact flex items-center flex-col gap-8">
           <h1 className='text-red-700'>Contact Us</h1>
-          <div className=' flex gap-4 '>
-            <a href='google.com' className="block mb-2"><FiPhone /></a>
-            <a href='' className="block mb-2"><AiOutlineMail /></a>
-            <a href='' className="block mb-2"><FaInstagram /></a>
-            <a href='' className="block mb-2"><FaLinkedinIn /></a>
-            <a href=""><FaXTwitter /></a>
-          </div>  
+          <div className="flex gap-4">
+            <a href="https://google.com" className="block mb-2 hover:text-green-500"><FiPhone /></a>
+            <a href="#" className="block mb-2 hover:text-green-500"><AiOutlineMail /></a>
+            <a href="#" className="block mb-2 hover:text-green-500"><FaInstagram /></a>
+            <a href="#" className="block mb-2 hover:text-green-500"><FaLinkedinIn /></a>
+            <a href="#" className="block mb-2 hover:text-green-500"><FaXTwitter /></a>
+          </div>
         </div>
         <div className="service w-[20vw]">
           <h1 className='mb-4 text-red-700'>Our Services</h1>
