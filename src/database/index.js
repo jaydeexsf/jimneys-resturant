@@ -60,7 +60,7 @@ const menuItems = [
       name: "Dates",
       price: 189,
       category: ["Breakfast", "Lunch", "Dinner"],
-      imageUrl: 'src/assets/images/dates.png',
+      imageUrl: 'src/assets/images/dates.jpg',
       description: 'Natural sweetness, rich in nutrients. Perfect for sunnah, iftar, and healthy snacking. Sustainably sourced.',
 
     }
