@@ -1,0 +1,15 @@
+
+
+  .btn {
+    transition: all  0.4s;
+  }
+
+  .btn:hover {
+    background-color: blur(255, 0, 255);
+    transform: scale(1.01);
+  }
+
+.btn:focus {
+    background-color: black;
+    color: white;
+}  

@@ -7,6 +7,7 @@ import Menu from './pages/Menu';
 // import Order from './pages/Order';
 import Location from './pages/Location';
 import { Filter } from './components/Filter';
+import './App.css';
 
 function App() {
   return (
