@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import products from '../database/index'; // Import your product data
 import MenuItem from './MenuItem';
 import Button3 from './Button3';
-import './Filter.css';
 
 //i have to chane this since im now just practising
 export const Filter = () => {
