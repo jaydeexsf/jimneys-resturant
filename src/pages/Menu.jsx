@@ -26,8 +26,8 @@ export const Menu = () => {
     };
 
     return (
-        <div className='bg-gray-900 min-h-[100vh] flex flex-col items-center h-full text-white'>
-            <h1 className='flex justify-center'></h1>
+        <div className='bg-gray-900 min-h-[100vh] flex py-[30px] flex-col items-center h-full text-white'>
+            <h1 className='flex justify-start text-[40px]'></h1>
             <div className="flex gap-4 mt-[30px] p-[15px]">
                 <Button3
                     cont="All"

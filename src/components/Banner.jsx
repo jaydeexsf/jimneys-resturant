@@ -54,8 +54,8 @@ const Banner = () => {
         <Link to="/menu">
             <button className="bg-transparent border hover:text-red-700 ml-[20px] text-white py-2 px-4 rounded-sm">View menu</button>
         </Link> */}
-         {Swindow < 1535 ? <Button fist={"Order Now"} second={"Thank Us Later"} /> : <Button4 fist={'Order now'} second={"Thank Us Later"}/>}
-        <Button2 fist={"View Menu"}/>
+         <Link to="/order">{Swindow < 1535 ? <Button fist={"Order Now"} second={"Thank Us Later"} /> : <Button4 fist={'Order now'} second={"Thank Us Later"}/>}</Link>
+        <Link to="/menu"><Button2 fist={"View Menu"}/></Link>
         </div>
       </div>
     </section>

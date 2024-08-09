@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import Menu from './pages/Menu';
 import Order from './pages/Order';
 import Location from './pages/Location';
-import { Filter } from './components/Filter';
+// import { Filter } from './components/Filter';
 import './App.css';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
     <Router>
          <div>
          <div className='bg-red-700 w-[100%] h-[2vh]'></div>
-          <Header className="fixed top-0 left-0 z-20 right-0"/>
+          <Header className="absolute z-20 right-0"/>
           {/* <Home /> */}
           <main>
             <Routes>
