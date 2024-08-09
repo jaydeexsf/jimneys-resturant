@@ -4,15 +4,17 @@ import MenuItem from './MenuItem';
 import Button3 from './Button3';
 import './Filter.css';
 
+//i have to chane this since im now just practising
 export const Filter = () => {
     const [selectedCategory, setSelectedCategory] = useState("All");
     const [activeButton, setActiveButton] = useState("All");
 
-    // Filter products based on the selected category
+    // filter products based on the selected category
     const filteredProducts = selectedCategory === "All"
         ? products
         : products.filter(product => product.category === selectedCategory);
 
+       // when you click the buttons the two above states are updated     
     const handleButtonClick = (category) => {
         if (activeButton === category) {
             // changing the button color if the same button is clicked
@@ -25,17 +27,17 @@ export const Filter = () => {
     };
 
     return (
-        <div className='bg-gray-900 flex flex-col justify-center items-center h-full text-white'>
+        <div className='bg-gray-900 min-h-[100vh] flex flex-col items-center h-full text-white'>
             <h1 className='flex justify-center'></h1>
             <div className="flex gap-4 mt-[30px] p-[15px]">
                 <Button3
                     cont="All"
                     onClick={() => handleButtonClick("All")}
-                    isActive={activeButton === "All"}
+                     isActive={activeButton === "All"}
                 />
                 <Button3
                     cont="Breakfast"
-                    onClick={() => handleButtonClick("Breakfast")}
+                     onClick={() => handleButtonClick("Breakfast")}
                     isActive={activeButton === "Breakfast"}
                 />
                 <Button3
