@@ -14,7 +14,7 @@ function App() {
     <Router>
          <div>
          <div className='bg-red-700 w-[100%] h-[2vh]'></div>
-          <Header className="absolute z-20 right-0"/>
+          <Header className="absolute bg-red-700 z-20 right-0"/>
           {/* <Home /> */}
           <main>
             <Routes>

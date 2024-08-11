@@ -1,7 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import { useState } from 'react';
 
 const Header = () => {
+
+  // const locationurl  = [location, setLocation] =  useState()
+
+  // console.log(useLocation().pathname);
+
   return (
     <header className="bg-black p-4">
       <div className="container mx-auto flex justify-between items-center">
