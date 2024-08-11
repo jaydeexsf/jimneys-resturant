@@ -38,7 +38,6 @@ const Banner = () => {
   }
 
   seet();
-  console.log(Swindow);
 
   return (
     <section style={Swindow < 1535 ? backgroundImageStyle : bimstyle} className="bg-black flex flex-start w-[100%] h-[75vh] text-white py-20">
