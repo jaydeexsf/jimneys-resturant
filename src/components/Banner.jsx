@@ -40,7 +40,7 @@ const Banner = () => {
   seet();
 
   return (
-    <section style={Swindow < 1535 ? backgroundImageStyle : bimstyle} className="bg-black flex flex-start w-[100%] h-[75vh] text-white py-20">
+    <section style={Swindow < 1535 ? backgroundImageStyle : bimstyle} className="bg-black min-h-[450px] flex flex-start w-[100%] h-[75vh] text-white py-20">
       <div className="container 2xl:flex 2xl:justify-center xl:mb-[300px] 2xl:w-[100%] items-center 2xl:flex-col w-[40vw] mx-[5vw]">
         <h1 className="text-[36px] font-medium mb-4">Freshness in <span className="text-red-700">Every</span> Bite</h1>
         <p className="mb-8 text-sm 2xl:w-[50vw] 2xl:text-center">

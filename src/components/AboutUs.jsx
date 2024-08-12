@@ -63,7 +63,7 @@ export const AboutUs = () => {
       />
       <div>
         <div>
-          <h1 ref={titleRef} className='text-4xl mb-[20px]'>Our Story</h1>
+          <h1 ref={titleRef} className='text-4xl mb-[20px] font-semibold text-red-700'>Our Story</h1>
           <p ref={paragraph1Ref} className='w-[40vw] flex-1'>
             Welcome to Jinmney's Fish and Chips, where our journey begins with a passion for authentic flavors and heartfelt hospitality. Nestled in the heart of Mankweng we invite you to experience the rich tapestry of Islamic culinary traditions, lovingly prepared to tantalize your senses and nourish your soul.
           </p>

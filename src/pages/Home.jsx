@@ -13,8 +13,8 @@ const Home = () => {
       <Banner />
       <Contact/>
       <AboutUs />
-      <section className="container mx-auto my-8">
-        <h2 className="text-3xl text-center mb-16 italic">Menu</h2>
+      <section className="container mx-auto  mt-[-90px]">
+        <h2 className="text-3xl text-center mb-16 italic text-red-700 font-bold">Menu</h2>
         <div className="bg-green-950">
           <Options />
         </div>
