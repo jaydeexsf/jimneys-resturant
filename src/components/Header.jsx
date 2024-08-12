@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { CiMenuBurger } from "react-icons/ci";
 
 
-const Header = () => {
+const Header = ({className}) => {
   const location = useLocation().pathname; // Get the current URL path
 
 const style = 'text-red-700 underline decoration-white	decoration-4	underline-offset-8'
@@ -16,8 +16,8 @@ const style = 'text-red-700 underline decoration-white	decoration-4	underline-of
         `hover:text-red-700 p-2 rounded-lg mx-2 ${location === path ? style : 'text-white hover:bg-gray-900'}`;
 
   return (
-    <header className="bg-black p-4">
-      <div className="container mx-auto flex justify-between items-center">
+    <header className={`bg-black p-4`}>
+      <div className={`container mx-auto flex justify-between items-center`}>
         <h1 className="text-white items-center text-3xl flex gap-2">
           <img src='src/assets/images/PSX_20240717_161845-removebg-preview.png' className='w-8' alt="Logo" />
           Jimney's
