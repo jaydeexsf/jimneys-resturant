@@ -26,11 +26,11 @@ function Footer() {
         <div className="contact flex items-center flex-col gap-8">
           <h1 className='text-red-700'>Contact Us</h1>
           <div className="flex gap-4">
-            <a href="https://google.com" className="block mb-2 hover:text-green-500"><FiPhone /></a>
-            <a href="#" className="block mb-2 hover:text-green-500"><AiOutlineMail /></a>
-            <a href="#" className="block mb-2 hover:text-green-500"><FaInstagram /></a>
-            <a href="#" className="block mb-2 hover:text-green-500"><FaLinkedinIn /></a>
-            <a href="#" className="block mb-2 hover:text-green-500"><FaXTwitter /></a>
+            <a href="/order" className="block mb-2 hover:text-red-500"><FiPhone /></a>
+            <a href="https://mail.google.com/mail" target='_' className="block mb-2 hover:text-red-500"><AiOutlineMail /></a>
+            <a href="https://instagram.com" target='_' className="block mb-2 hover:text-red-500"><FaInstagram /></a>
+            <a href="https://linkein.com" target='_' className="block mb-2 hover:text-red-500"><FaLinkedinIn /></a>
+            <a href="https://x.com" target='_' className="block mb-2 hover:text-red-500"><FaXTwitter /></a>
           </div>
         </div>
         <div className="service w-[20vw]">
