@@ -41,7 +41,7 @@ const Options = () => {
         <h1 className='text-white font-bold text-4xl'>Menu Features</h1>
       </div>
         <div className='grid lg:grid-cols-3 gap-8 px-[10px]'>
-            <div className="menuItem bg-black p-[15px] pt-10 lg:max-w-[400px]">
+            <div className="menuItem hover:translate-y-[-10px] duration-[0.4s] ease-in transition bg-black p-[15px] pt-10 lg:max-w-[400px]">
                 <IoFastFoodOutline className='text-6xl mb-3'/>
                 <div>
                   <h1 className='text-2xl font-bold mb-4'>Always Fresh</h1>
@@ -49,7 +49,7 @@ const Options = () => {
                 </div>
                                     
             </div>
-            <div className="menuItem  bg-black p-[15px] pt-10 lg:max-w-[400px]">
+            <div className="menuItem hover:translate-y-[-10px] duration-[0.4s] ease-in transition bg-black p-[15px] pt-10 lg:max-w-[400px]">
               <MdOutlineFastfood className='text-6xl mb-3'/>
               <div>
                   <h1 className='text-2xl font-bold mb-4'>Always Fresh</h1>
@@ -57,7 +57,7 @@ const Options = () => {
               </div>
                 
             </div>
-            <div className="menuItem  bg-black p-[15px] pt-10lg:max-w-[400px]">
+            <div className="menuItem hover:translate-y-[-10px] duration-[0.4s] ease-in transition bg-black p-[15px] pt-10lg:max-w-[400px]">
               <MdOutlineNoFood className='text-6xl mb-3'/>
               <div>
                   <h1 className='text-2xl font-bold mb-4'>Always Fresh</h1>
@@ -66,7 +66,7 @@ const Options = () => {
               
             </div>
         </div>
-        <Link to="/menu"><button className='bg-red-700 hover:bg-black hover:border hover:text-red-600 transition-all py-3 text-black font-mono px-12 text-2xl font-semibold'>See Menu</button></Link>
+        <Link to="/menu"><button className='bg-red-700 hover:bg-black hover:border-red-600 hover:text-red-600 duration-500 transition-all py-3 text-black font-mono px-12 text-xl font-semibold'>See Menu</button></Link>
     </section>
   
     // <div

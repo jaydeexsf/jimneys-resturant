@@ -14,7 +14,7 @@ const Home = () => {
       <Contact/>
       <AboutUs />
       <section className="container mx-auto  mt-[-90px]">
-        <h2 className="text-3xl text-center mb-16 italic text-red-700 font-bold">Menu</h2>
+        {/* <h2 className="text-3xl text-center mb-16 italic text-red-700 font-bold">Menu</h2> */}
         <div className="">
           <Options />
         </div>
