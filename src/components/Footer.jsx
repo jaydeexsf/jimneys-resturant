@@ -13,7 +13,7 @@ function Footer() {
         <img className='w-16' src="src/assets/images/PSX_20240717_161845-removebg-preview.png" alt="Logo" />
       </div>
 
-      <div className="text-left flex flex-col md:flex-row md:justify-between w-full md:w-[80%]">
+      <div className="text-left flex gap-12 pl-[30px] flex-col md:flex-row md:justify-between w-full md:w-[80%]">
         <div className="links mb-4 md:mb-0">
           <h1 className='mb-6 text-3xl text-red-700'>Quik Links</h1>
           <div>
@@ -23,7 +23,7 @@ function Footer() {
           </div>  
         </div>
 
-        <div className="contact flex items-center flex-col gap-8">
+        <div className="contact flex items-cente flex-col gap-8">
           <h1 className='text-red-700 text-3xl'>Contact Us</h1>
           <div className="flex gap-4">
             <a href="/order" className="block mb-2 hover:text-red-500"><FiPhone /></a>
