@@ -4,8 +4,12 @@ export const Button4 = ({fist, second}) => {
   return (
     <div>
         <button className="
+            text-white
             group
             p-[22px]
+            px-20
+            whitespace-nowrap	
+            py-[25px]
             hover:bg-black
             hover:text-red-400
             cursor-pointer 
@@ -17,7 +21,7 @@ export const Button4 = ({fist, second}) => {
             items-center 
             justify-center
             bg-red-500
-            text-gray-900 
+            
             h-auto  
             w-[120px]  
             overflow-hidden   
