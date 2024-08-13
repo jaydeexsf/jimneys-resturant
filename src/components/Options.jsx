@@ -35,7 +35,7 @@ const Options = () => {
   // }, []);
 
   return (
-    <section className='flex flex-col gap-12 items-center justify-center' id='menuSe'>
+    <section className='flex h-[600px] flex-col gap-14 items-center justify-center' id='menuSe'>
       <div className='flex flex-col gap-1 text-center'>
         <h2 className='text-yellow-400 font-semibold text-2xl font-mono'>Explore</h2>
         <h1 className='text-white font-bold text-4xl'>Menu Features</h1>
