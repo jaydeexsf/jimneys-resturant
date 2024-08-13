@@ -5,10 +5,11 @@ export const Button = ({fist, second}) => {
     <div>
         <button className="
             group
-            p-[22px]
+            px-20
+            py-[25px]
             cursor-pointer 
             relative
-            text-sm 
+            text-md 
             font-normal 
             border-0 
             flex
