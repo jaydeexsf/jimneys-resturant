@@ -67,9 +67,14 @@ const Banner = () => {
         </div>
       </div>
 
-      <div className='flex flex-col items-center px-[20px] w-[100%] text-center justify-center mt-[-250px] md:hidden'>
+      <div className='flex flex-col gap-14 items-center px-[20px] w-[100%] text-center justify-center mt-[-100px] md:hidden'>
          <h1 className="text-[40px] text-center font-medium mb-4">Freshness in <span className="text-red-700 text-center">Every</span> Bite</h1>
-          <p className='text-white font-semibold px-[40px]'>At Jimney's Fish & Chips, we bring you a delightful harmony of timeless flavors infused with contemporary culinary flair.  Nestled conveniently in the vibrant heart of Mankweng, adjacent to the University of Limpopo and just a stone's throw from the local garage.</p>
+          <p className='mt-[20px] font-semibold px-[40px]'>At Jimney's Fish & Chips, we bring you a delightful harmony of timeless flavors infused with contemporary culinary flair.  Nestled conveniently in the vibrant heart of Mankweng, adjacent to the University of Limpopo and just a stone's throw from the local garage.</p>
+          <div className=''>
+             <button className='bg-white hover:bg-red-700 hover:border-red-600 duration-500 transition-all whitespace-nowrap py-2 text-black font-mono px-6 text-sm font-semibold'>Order Now</button>
+             <button className='bg-red-700 ml-6 hover:bg-white hover:border-red-600 duration-500 transition-all whitespace-nowrap py-2 text-black font-mono px-6 text-sm font-semibold'>View Menu</button>
+
+          </div>
       </div>
     </section>
   );
