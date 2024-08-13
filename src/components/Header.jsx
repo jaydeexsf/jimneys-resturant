@@ -15,6 +15,10 @@ const style = 'text-red-700 underline decoration-white	decoration-4	underline-of
     const getLinkClassName2 = () =>
         `hover:text-red-700 p-2 rounded-lg mx-2 ${location === path ? style : 'text-white hover:bg-gray-900'}`;
 
+        const showmenu = () => {
+          setClass('')
+        }
+
   return (
     <header className={`bg-black p-4`}>
       <div className={`container mx-auto flex justify-between items-center`}>
@@ -22,7 +26,7 @@ const style = 'text-red-700 underline decoration-white	decoration-4	underline-of
           <img src='src/assets/images/PSX_20240717_161845-removebg-preview.png' className='w-8' alt="Logo" />
           Jimney's
         </h1>
-        <CiMenuBurger className='text-gray-200 text-3xl md:hidden hover:cursor-pointer flex'/>
+        <CiMenuBurger onClick={showmenu} className='text-gray-200 text-3xl md:hidden hover:cursor-pointer flex'/>
         <nav className='text-xl hidden md:flex'>
           <Link 
             to="/" 
