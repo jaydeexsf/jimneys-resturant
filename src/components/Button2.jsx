@@ -12,7 +12,7 @@ export const Button2 = ({fist}) => {
             {fist}
         </a>
     </div> */}
-    <button className='bg-red-700 hover:shadow-md ml-6 hover:shadow-red-600 hover:bg-black hover:border-red-600 hover:text-red-600 duration-500 transition-all py-3 text-black font-mono px-12 text-xl font-semibold'>{fist}</button>
+    <button className='bg-red-700 hover:shadow-md ml-6 hover:shadow-red-600 hover:bg-black hover:border-red-600 hover:text-red-600 duration-500 transition-all whitespace-nowrap py-3 text-black font-mono px-12 text-xl font-semibold'>{fist}</button>
     </div>
   )
 }

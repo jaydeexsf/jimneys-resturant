@@ -44,3 +44,10 @@
 p {
   color: rgba(172, 172, 172, 0.96);
 }
+
+@media (min-width: 760px) {
+  .container2 {
+    display: block;
+  }
+}
+

@@ -6,6 +6,7 @@ export const Button = ({fist, second}) => {
         <button className="
             group
             px-20
+            whitespace-nowrap	
             py-[25px]
             cursor-pointer 
             relative
