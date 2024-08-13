@@ -10,14 +10,17 @@ import { Button4 } from './Button4';
 const Banner = () => {
 
   
- const backgroundImageStyle = {
-    background: `url(${data[4].imageUrl})`,
-    backgroundSize: '',
-    backgroundPosition: 'right',
-    backgroundRepeat: 'no-repeat',
-    backgroundColor: 'black',
+//  const backgroundImageStyle = {
+//     background: `url(${data[4].imageUrl})`,
+//     backgroundSize: '',
+//     backgroundPosition: 'right',
+//     backgroundRepeat: 'no-repeat',
+//     backgroundColor: 'black',
     
-  };
+//   };
+
+
+
   
   const bimstyle = {
     background: `url(${data[4].imageUrl})`,
@@ -38,6 +41,16 @@ const Banner = () => {
       setSwindow(window.innerWidth);
     })
   }
+
+  // seet();
+
+  const backgroundImageStyle = {
+    background: Swindow > 790 ? `url(${data[4].imageUrl})` : ``,
+    backgroundSize: '', // or 'contain' based on your needs
+    backgroundPosition: 'right',
+    backgroundRepeat: 'no-repeat',
+    backgroundColor: 'black',
+  };
 
   seet();
 
