@@ -2,55 +2,96 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Link } from 'react-router-dom';
+import { IoFastFoodOutline } from "react-icons/io5";
+import { MdOutlineNoFood } from "react-icons/md";
+import { MdOutlineFastfood } from "react-icons/md";
+
+
+
+
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
 const Options = () => {
-  const menuRef = useRef(null);
+  // const menuRef = useRef(null);
 
-  useEffect(() => {
-    gsap.to(menuRef.current.children, {
-      scrollTrigger: {
-        trigger: menuRef.current,
-        start: 'bottom 80%',
-        scrub: true, // Trigger animation when the top of the element hits 80% of the viewport height
-        // End the animation when the bottom of the element hits the top of the viewport
-        // scrub: false, // Smooth animation as you scroll
-       // Uncomment this line to visualize scrollTrigger markers (for debugging)
-      },
-      duration: 6,
-      opacity: 0.8,
-      scale: 1.1,
-      ease: 'back.out(1.7)',
-      stagger: 0.3 // Adjusted for smoother stagger effect
-    });
-  }, []);
+  // useEffect(() => {
+  //   gsap.to(menuRef.current.children, {
+  //     scrollTrigger: {
+  //       trigger: menuRef.current,
+  //       start: 'bottom 80%',
+  //       scrub: true, // Trigger animation when the top of the element hits 80% of the viewport height
+  //       // End the animation when the bottom of the element hits the top of the viewport
+  //       // scrub: false, // Smooth animation as you scroll
+  //      // Uncomment this line to visualize scrollTrigger markers (for debugging)
+  //     },
+  //     duration: 6,
+  //     opacity: 0.8,
+  //     scale: 1.1,
+  //     ease: 'back.out(1.7)',
+  //     stagger: 0.3 // Adjusted for smoother stagger effect
+  //   });
+  // }, []);
 
   return (
-    <div
-      ref={menuRef}
-      className="flex flex-wrap justify-center mt-[-50px] bg-gray-900 p-5 min-h-[550px]"
-    >
-      {['Breakfast', 'Lunch', 'Dinner'].map((item, index) => (
-        <div
-          key={index}
-          className="relative flex gap-6 flex-col justify-around items-center m-5"
-        >
-          <h1 className="text-2xl">{item}</h1>
-          <div className="flex flex-col gap-6 items-center justify-center">
-            <img
-              src={`src/assets/images/${item.toLowerCase()}.jpg`}
-              alt={item}
-              className="sm:w-[360px] md:w-48 xl:w-[400px] h-72 object-cover border-2 border-white rounded-md"
-            />
-            <Link to="menu"><button className="text-sm transition-transform transform hover:text-red-700 hover:scale-105 hover:bg-white bg-red-600 text-white px-3 py-2 rounded-[2px]">
-              Check Menu
-            </button></Link>
-          </div>  
+    <section className='flex flex-col gap-12 items-center justify-center' id='menuSe'>
+      <div className='flex flex-col gap-1 text-center'>
+        <h2 className='text-yellow-400 font-semibold text-2xl font-mono'>Explore</h2>
+        <h1 className='text-white font-bold text-4xl'>Menu Features</h1>
+      </div>
+        <div className='grid lg:grid-cols-3 gap-8 px-[10px]'>
+            <div className="menuItem bg-black p-[15px] pt-10 lg:max-w-[400px]">
+                <IoFastFoodOutline className='text-6xl mb-3'/>
+                <div>
+                  <h1 className='text-2xl font-bold mb-4'>Always Fresh</h1>
+                  <p className='opacity-70'>We focus on serving fresh food always. Fresh food is always best for your precious body and we keep that in mind and that's why we like to serve everything fresh</p>
+                </div>
+                                    
+            </div>
+            <div className="menuItem  bg-black p-[15px] pt-10 lg:max-w-[400px]">
+              <MdOutlineFastfood className='text-6xl mb-3'/>
+              <div>
+                  <h1 className='text-2xl font-bold mb-4'>Always Fresh</h1>
+                  <p  className='opacity-70'>Serving tasty food has always been our first priority and also to make sure the taste is constant everytime you consume, you will see no difference in taste</p>
+              </div>
+                
+            </div>
+            <div className="menuItem  bg-black p-[15px] pt-10lg:max-w-[400px]">
+              <MdOutlineNoFood className='text-6xl mb-3'/>
+              <div>
+                  <h1 className='text-2xl font-bold mb-4'>Always Fresh</h1>
+                  <p  className='opacity-70'>We know great ingredients are must to take the taste and health on next level so that's why we focus on using oragnic ingredients so you don't have to worry</p>
+              </div>
+              
+            </div>
         </div>
-      ))}
-    </div>
+        <Link to="/menu"><button className='bg-red-700 hover:bg-black hover:border hover:text-red-600 transition-all py-3 text-black font-mono px-12 text-2xl font-semibold'>See Menu</button></Link>
+    </section>
+  
+    // <div
+    //   ref={menuRef}
+    //   className="flex flex-wrap justify-center mt-[-50px] bg-gray-900 p-5 min-h-[550px]"
+    // >
+    //   {['Breakfast', 'Lunch', 'Dinner'].map((item, index) => (
+    //     <div
+    //       key={index}
+    //       className="relative flex gap-6 flex-col justify-around items-center m-5"
+    //     >
+    //       <h1 className="text-2xl">{item}</h1>
+    //       <div className="flex flex-col gap-6 items-center justify-center">
+    //         <img
+    //           src={`src/assets/images/${item.toLowerCase()}.jpg`}
+    //           alt={item}
+    //           className="sm:w-[360px] md:w-48 xl:w-[400px] h-72 object-cover border-2 border-white rounded-md"
+    //         />
+    //         <Link to="menu"><button className="text-sm transition-transform transform hover:text-red-700 hover:scale-105 hover:bg-white bg-red-600 text-white px-3 py-2 rounded-[2px]">
+    //           Check Menu
+    //         </button></Link>
+    //       </div>  
+    //     </div>
+    //   ))}
+    // </div>
   );
 };
 
