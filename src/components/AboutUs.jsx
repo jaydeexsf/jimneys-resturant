@@ -26,8 +26,8 @@ export const AboutUs = () => {
       {
         opacity: 1,
         y: 0,
-        duration: 1.5,
-        delay: 0.5,
+        duration: 1,
+        delay: 0.1,
         stagger: 0.3,
         scrollTrigger: {
           trigger: titleRef.current,
