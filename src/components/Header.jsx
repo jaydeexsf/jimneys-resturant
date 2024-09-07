@@ -30,7 +30,7 @@ const style = 'text-red-700 underline decoration-white	decoration-4	underline-of
         <nav className='text-xl hidden md:flex'>
           <Link 
             to="/jimneys-resturant/" 
-            className={getLinkClassName('/jimneys-resturant')}
+            className={getLinkClassName('/jimneys-resturant/')}
           >
             Home
           </Link>
