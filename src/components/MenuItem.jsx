@@ -14,7 +14,7 @@ const MenuItem = ({ item }) => {
   
 
   return (
-    <div className="relative shadow bg-gray-950 flex flex-col justify-between p-4 rounded">
+    <div className="relative shadow bg-gray-950 flex min-w-[210px] flex-col justify-between p-4 mx-auto rounded">
       <img src={item.imageUrl} alt={item.name} className="w-full h-[72] object-cover mb-4" />
       <div className='bg-white-500 flex-end'>
       <h3 className="text-xl font-bold">{item.name}</h3>

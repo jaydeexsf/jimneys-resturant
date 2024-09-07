@@ -50,7 +50,7 @@ export const Menu = () => {
                     isActive={activeButton === "Dinner"}
                 />
             </div>
-            <div className="grid justify-center w-[100vw] p-[80px] grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid justify-center w-[100vw] py-[80px] px-8 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:grid-cols-4 gap-4">
                 {filteredProducts.map((item, index) => (
                     <MenuItem key={index} item={item} />
                 ))}
