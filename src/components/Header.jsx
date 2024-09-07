@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { CiMenuBurger } from "react-icons/ci";
 import logo from '../assets/images/PSX_20240717_161845-removebg-preview.png'
 import { GiCancel } from "react-icons/gi";
+import { FaSleigh } from 'react-icons/fa';
 
 
 
@@ -30,12 +31,12 @@ const style = 'text-red-700 underline decoration-white	decoration-4	underline-of
         }
         
         function removemnu() {
-          setMenuVisible(false)
+          setMenuVisible(true)
         }
 
 
   return (
-    <header  className={`bg-black p-4`}>
+    <header  className={`bg-black p-4 sticky top-0 left-0 z-9999`}>
       <div className={`container mx-auto flex relative justify-between items-center`}>
         <h1 className="text-white items-center text-3xl flex gap-2">
           <img src={logo} className='w-10' alt="Logo" />
@@ -69,7 +70,7 @@ const style = 'text-red-700 underline decoration-white	decoration-4	underline-of
           </Link>
         </nav>
 
-        <nav onClick={removemnu} className={`text-xl ${menuvisible ? 'flex translate-x-0' : 'translate-x-[120%] '} flex rounded-lg py-2 absolute top-[62px] transition duration-700 -right-[0] w-full sm:w-60 px-8 sm:px-0 bg-red-950 flex-col md:hidden`}>
+        <nav onClick={removemnu} className={`text-xl ${!menuvisible ? 'flex translate-x-0' : 'translate-x-[120%]'} flex rounded-lg py-2 absolute top-[62px] transition duration-700 -right-[0] w-full sm:w-60 px-8 sm:px-0 bg-red-950 flex-col md:hidden`}>
           <Link 
             to="/jimneys-resturant/" 
             className={getLinkClassName('/jimneys-resturant/')}
@@ -95,7 +96,7 @@ const style = 'text-red-700 underline decoration-white	decoration-4	underline-of
             Location
           </Link>
         </nav>
-        <button onClick={showmenu}  > {!menuvisible ? <CiMenuBurger className='text-gray-200 text-3xl md:hidden hover:cursor-pointer flex'/> : <GiCancel  className='text-gray-200 text-3xl md:hidden hover:cursor-pointer flex'/> }</button> 
+        <button onClick={showmenu}  > {menuvisible ? <CiMenuBurger className='text-gray-200 text-3xl md:hidden hover:cursor-pointer flex'/> : <GiCancel  className='text-gray-200 text-3xl md:hidden hover:cursor-pointer flex'/> }</button> 
       </div>
     </header>
   );
