@@ -29,7 +29,7 @@ const style = 'text-red-700 underline decoration-white	decoration-4	underline-of
         <CiMenuBurger onClick={showmenu} className='text-gray-200 text-3xl md:hidden hover:cursor-pointer flex'/>
         <nav className='text-xl hidden md:flex'>
           <Link 
-            to="/jimneys-resturant" 
+            to="/jimneys-resturant/" 
             className={getLinkClassName('/jimneys-resturant')}
           >
             Home
