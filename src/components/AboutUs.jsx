@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import imgr from "../assets/images/gg.jpg";
 
 export const AboutUs = () => {
   const imgRef = useRef(null);
@@ -40,7 +41,7 @@ export const AboutUs = () => {
       <img
         ref={imgRef}
         className='border-[5px] rounded-md border-red-700 w-[auto] h-[500px]'
-        src="src/assets/images/pexels-cottonbro-4253320.jpg"
+        src={imgr}
         alt="Cooking-a-meal"
       />
       <div>

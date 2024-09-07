@@ -13,7 +13,7 @@ const Order = () => {
         To place an order, please call us at <span className="font-semibold">123-456-7890</span> or visit our restaurant.
       </p>
       <div className="flex flex-col items-center gap-4">
-        <Link to="/location" className="flex items-center gap-2 text-lg bg-gray-800 hover:bg-gray-700 rounded-md py-2 px-4 transition-colors duration-300">
+        <Link to="/jimneys-resturant/location" className="flex items-center gap-2 text-lg bg-gray-800 hover:bg-gray-700 rounded-md py-2 px-4 transition-colors duration-300">
           <FaLocationDot />
           <span>See Location</span>
         </Link>

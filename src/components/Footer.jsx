@@ -5,12 +5,13 @@ import { AiOutlineMail } from "react-icons/ai";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import theimg from "../assets/images/PSX_20240717_161845-removebg-preview.png";
 
 function Footer() {
   return (
     <div className='flex flex-col text-2xl items-center py-8 bg-black text-white'>
       <div className="logo mb-4">
-        <img className='w-16' src="src/assets/images/PSX_20240717_161845-removebg-preview.png" alt="Logo" />
+        <img className='w-16' src={theimg} alt="Logo" />
       </div>
 
       <div className="text-left flex gap-12 pl-[30px] flex-col md:flex-row md:justify-between w-full md:w-[80%]">

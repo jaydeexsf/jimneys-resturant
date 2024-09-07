@@ -18,12 +18,12 @@ function App() {
           {/* <Home /> */}
           <main>
             <Routes>
-              <Route path='/' element={<Home />}/>
               <Route path='/jimneys-resturant/' element={<Home />}/>
-              <Route path="/menu" element={<Menu />} />
+              <Route path='/jimneys-resturant/' element={<Home />}/>
+              <Route path="/jimneys-resturant/menu" element={<Menu />} />
               {/* <Route path='/about' element={<About />}/> */}
-              <Route path='/order' element={<Order />}/>
-              <Route path='/location' element={<Location />} />
+              <Route path='/jimneys-resturant/order' element={<Order />}/>
+              <Route path='/jimneys-resturant/location' element={<Location />} />
             </Routes>
           </main>
         </div>

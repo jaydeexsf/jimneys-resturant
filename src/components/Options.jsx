@@ -66,7 +66,7 @@ const Options = () => {
               
             </div>
         </div>
-        <Link to="/menu"><button className='bg-red-700 hover:shadow-md hover:shadow-red-600 hover:bg-black hover:border-red-600 hover:text-red-600 duration-500 transition-all py-3 text-black font-mono px-12 text-xl font-semibold'>See Menu</button></Link>
+        <Link to="/jimneys-resturant/menu"><button className='bg-red-700 hover:shadow-md hover:shadow-red-600 hover:bg-black hover:border-red-600 hover:text-red-600 duration-500 transition-all py-3 text-black font-mono px-12 text-xl font-semibold'>See Menu</button></Link>
     </section>
   
     // <div

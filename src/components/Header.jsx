@@ -29,26 +29,26 @@ const style = 'text-red-700 underline decoration-white	decoration-4	underline-of
         <CiMenuBurger onClick={showmenu} className='text-gray-200 text-3xl md:hidden hover:cursor-pointer flex'/>
         <nav className='text-xl hidden md:flex'>
           <Link 
-            to="/" 
-            className={getLinkClassName('/')}
+            to="/jimneys-resturant" 
+            className={getLinkClassName('/jimneys-resturant')}
           >
             Home
           </Link>
           <Link 
-            to="/menu" 
-            className={getLinkClassName('/menu')}
+            to="/jimneys-resturant/menu" 
+            className={getLinkClassName('/jimneys-resturant/menu')}
           >
             Menu
           </Link>
           <Link 
-            to="/order" 
-            className={getLinkClassName('/order')}
+            to="/jimneys-resturant/order" 
+            className={getLinkClassName('/jimneys-resturant/order')}
           >
             Order
           </Link>
           <Link 
-            to="/location" 
-            className={getLinkClassName('/location')}
+            to="/jimneys-resturant/location" 
+            className={getLinkClassName('/jimneys-resturant/location')}
           >
             Location
           </Link>

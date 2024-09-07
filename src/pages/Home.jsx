@@ -9,7 +9,7 @@ import Options from '../components/Options';
 
 const Home = () => {
   return (
-    <div className='bg-gray-900 text-white'>
+    <div className='bg-gray-900 px-2 text-white'>
       <Banner />
       <Contact/>
       <AboutUs />
