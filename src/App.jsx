@@ -8,6 +8,7 @@ import Order from './pages/Order';
 import Location from './pages/Location';
 // import { Filter } from './components/Filter';
 import './App.css';
+import Login from './pages/Admin/Login';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
               {/* <Route path='/about' element={<About />}/> */}
               <Route path='/jimneys-resturant/order' element={<Order />}/>
               <Route path='/jimneys-resturant/location' element={<Location />} />
+              <Route path='/jimneys-resturant/login' element={<Login />} />
             </Routes>
           </main>
         </div>
