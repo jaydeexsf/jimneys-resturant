@@ -35,38 +35,48 @@ const Options = () => {
   // }, []);
 
   return (
-    <section className='flex lg:h-[600px] mb-10 flex-col gap-14 items-center justify-center' id='menuSe'>
+    <section className='flex lg:h-[600px]  flex-col gap-4 items-center justify-center' id='menuSe'>
       <div className='flex flex-col gap-1 text-center'>
-        <h2 className='text-red-600 font-semibold text-2xl font-mono'>Explore</h2>
-        <h1 className='text-white font-bold text-4xl'>Menu Features</h1>
+        <h2 className='text-red-600 font-semibold text-2xl font-mono mb-4'>Explore</h2>
+        <h1 className='text-white font-bold text-4xl mb-6'>Menu Features</h1>
       </div>
-        <div className='grid lg:grid-cols-3 gap-8 px-[10px]'>
+        <div className='grid lg:grid-cols-4 grid-cols-2 mx-auto gap-2 px-[10px]'>
             <div className="menuItem hover:translate-y-[-2px] rounded-lg duration-[0.4s] ease-in transition bg-black p-[15px] pt-10 lg:max-w-[400px]">
-                <IoFastFoodOutline className='text-6xl mb-3'/>
+                <IoFastFoodOutline className='text-5xl mb-3'/>
                 <div>
-                  <h1 className='text-2xl font-bold mb-4'>Always Fresh</h1>
-                  <p className='opacity-70'>We focus on serving fresh food always. Fresh food is always best for your precious body and we keep that in mind and that's why we like to serve everything fresh</p>
+                  <h1 className='text-xl font-bold mb-4'>Always Fresh</h1>
+                  <p className='opacity-70 text-sm'>We focus on serving fresh food always. Fresh food is always best for your precious body and we keep that in mind and that's why we like to serve everything fresh</p>
                 </div>
                                     
             </div>
             <div className="menuItem hover:translate-y-[-2px] rounded-lg duration-[0.4s] ease-in transition bg-black p-[15px] pt-10 lg:max-w-[400px]">
-              <MdOutlineFastfood className='text-6xl mb-3'/>
+              <MdOutlineFastfood className='text-5xl mb-3'/>
               <div>
-                  <h1 className='text-2xl font-bold mb-4'>Amazing Taste</h1>
-                  <p  className='opacity-70'>Serving tasty food has always been our first priority and also to make sure the taste is constant everytime you consume, you will see no rounded-lgifference in taste</p>
+                  <h1 className='text-xl font-bold mb-4'>Amazing Taste</h1>
+                  <p  className='opacity-70 text-sm'>Serving tasty food has always been our first priority and also to make sure the taste is constant everytime you consume, you will see no rounded-lgifference in taste</p>
               </div>
                 
             </div>
-            <div className="menuItem hover:translate-y-[-2px] rounded-lg duration-[0.4s] ease-in transition bg-black p-[15px] pt-10lg:max-w-[400px]">
-              <MdOutlineNoFood className='text-6xl mb-3'/>
+            <div className="menuItem hover:translate-y-[-2px] rounded-lg duration-[0.4s] ease-in transition bg-black p-[15px] pt-10 lg:max-w-[400px]">
+              <MdOutlineNoFood className='text-5xl mb-3'/>
               <div>
-                  <h1 className='text-2xl font-bold mb-4'>Halal Ingridients</h1>
-                  <p  className='opacity-70'>We know great ingredients are must to take the taste and health on next level, but most importanlty to get the akhira. So that's why we focus on using Halal oragnic ingredients so you don't have to worry</p>
+                  <h1 className='text-xl font-bold mb-4'>Halal Ingridients</h1>
+                  <p  className='opacity-70 text-sm'>We know great ingredients are must to take the taste and health on next level, but most importanlty to get the akhira. So that's why we focus on using Halal oragnic ingredients so you don't have to worry</p>
               </div>
               
             </div>
+            <div className="menuItem hover:translate-y-[-2px] rounded-lg duration-[0.4s] ease-in transition bg-black p-[15px] pt-10 lg:max-w-[400px]">
+              <MdOutlineFastfood className='text-5xl mb-3'/>
+              <div>
+                  <h1 className='text-xl font-bold mb-4'>Local Products</h1>
+                  <p  className='opacity-70 text-sm'>Serving tasty food has always been our first priority and also to make sure the taste is constant everytime you consume, you will see no rounded-lgifference in taste</p>
+              </div>
+                
+            </div>
         </div>
-        <Link to="/jimneys-resturant/menu"><button className='bg-red-700 hover:shadow-md hover:shadow-red-600 hover:bg-black hover:border-red-600 hover:text-red-600 duration-500 transition-all py-3 text-black font-mono px-12 text-xl font-semibold'>See Menu</button></Link>
+        <div className='pb-10'>
+        <Link to="/jimneys-resturant/menu"><button className='bg-red-700 hover:shadow-md hover:shadow-red-600 hover:bg-black hover:border-red-600 hover:text-red-600 duration-500 transition-all py-2 text-black font-mono px-8 text-[17px] font-semibold'>See Menu</button></Link>
+        </div>
     </section>
   
     // <div

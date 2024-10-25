@@ -8,12 +8,11 @@ import { FaSleigh } from 'react-icons/fa';
 
 
 const Header = ({className}) => {
-  const location = useLocation().pathname; // Get the current URL path
+  const location = useLocation().pathname; 
   const [menuvisible, setMenuVisible] = useState(true);
 
 const style = 'text-red-700 underline decoration-white	decoration-4	underline-offset-8'
 
-  // Determine if the current path matches the link's path
   const getLinkClassName = (path) => 
     `hover:text-red-700 p-2 rounded-lg mx-2 ${location === path ? style : 'text-white hover:bg-gray-900'}`;
 
@@ -70,7 +69,7 @@ const style = 'text-red-700 underline decoration-white	decoration-4	underline-of
           </Link>
         </nav>
 
-        <nav onClick={removemnu} className={`text-xl ${!menuvisible ? 'flex translate-x-0' : 'translate-x-[120%]'} flex rounded-lg py-2 absolute top-[62px] transition duration-700 -right-[0] w-full sm:w-60 px-8 sm:px-0 bg-red-950 flex-col md:hidden`}>
+        <nav onClick={removemnu} className={`text-xl ${!menuvisible ? 'flex translate-x-0' : 'translate-x-[120%] hidden'} flex rounded-lg py-2 absolute top-[62px] transition duration-700 -right-[0] w-full sm:w-60 px-8 sm:px-0 bg-red-950 flex-col md:hidden`}>
           <Link 
             to="/jimneys-resturant/" 
             className={getLinkClassName('/jimneys-resturant/')}

@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@keyframes scroll {
+    0% {
+      transform: translateX(100%); /* Start off-screen to the right */
+    }
+    100% {
+      transform: translateX(-100%); /* Move off-screen to the left */
+    }
+  }
+  
+  .animate-scroll {
+    animation: scroll 35s linear infinite; /* Adjust the duration as needed */
+  }
+  
+  @media (max-width: 640px) {
+    .animate-scroll {
+      animation-duration: 40s; /* Faster scroll on smaller devices */
+    }
+  }
+  
