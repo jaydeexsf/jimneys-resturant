@@ -35,7 +35,7 @@ const style = 'text-red-700 underline decoration-white	decoration-4	underline-of
 
 
   return (
-    <header  className={`bg-black p-4 sticky top-0 left-0 z-9999`}>
+    <header  className={`bg-black p-4 z-[100000000000000000000] sticky top-0 left-0 z-9999`}>
       <div className={`container mx-auto flex relative justify-between items-center`}>
         <h1 className="text-white items-center text-3xl flex gap-2">
           <img src={logo} className='w-10' alt="Logo" />

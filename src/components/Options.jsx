@@ -35,13 +35,13 @@ const Options = () => {
   // }, []);
 
   return (
-    <section className='flex lg:h-[600px]  flex-col gap-4 items-center justify-center' id='menuSe'>
+    <section className='flex lg:h-[600px]  flex-col gap-4 md:mt-[50px] mt-[100px] items-center justify-center' id='menuSe'>
       <div className='flex flex-col gap-1 text-center'>
-        <h2 className='text-red-600 font-semibold text-2xl font-mono mb-4'>Explore</h2>
-        <h1 className='text-white font-bold text-4xl mb-6'>Menu Features</h1>
+        <h2 className='text-red-600 font-semibold text-xl font-mono mb'>Explore</h2>
+        <h1 className='text-white font-bold text-3xl mb-6'>Menu Features</h1>
       </div>
         <div className='grid lg:grid-cols-4 grid-cols-2 mx-auto gap-2 px-[10px]'>
-            <div className="menuItem hover:translate-y-[-2px] rounded-lg duration-[0.4s] ease-in transition bg-black p-[15px] pt-10 lg:max-w-[400px]">
+            <div className="menuItem bg-gradient-to-r to-gray-950 from-black opacity pointer-events-none hover:translate-y-[-2px] rounded-lg duration-[0.4s] ease-in transition bg-black p-[15px] pt-10 lg:max-w-[400px]">
                 <IoFastFoodOutline className='text-5xl mb-3'/>
                 <div>
                   <h1 className='text-xl font-bold mb-4'>Always Fresh</h1>
@@ -49,7 +49,7 @@ const Options = () => {
                 </div>
                                     
             </div>
-            <div className="menuItem hover:translate-y-[-2px] rounded-lg duration-[0.4s] ease-in transition bg-black p-[15px] pt-10 lg:max-w-[400px]">
+            <div className="menuItem hover:translate-y-[-2px]  bg-gradient-to-r to-gray-950 from-black rounded-lg duration-[0.4s] ease-in transition bg-black p-[15px] pt-10 lg:max-w-[400px]">
               <MdOutlineFastfood className='text-5xl mb-3'/>
               <div>
                   <h1 className='text-xl font-bold mb-4'>Amazing Taste</h1>
@@ -57,7 +57,7 @@ const Options = () => {
               </div>
                 
             </div>
-            <div className="menuItem hover:translate-y-[-2px] rounded-lg duration-[0.4s] ease-in transition bg-black p-[15px] pt-10 lg:max-w-[400px]">
+            <div className="menuItem hover:translate-y-[-2px]  bg-gradient-to-r to-gray-950 from-black rounded-lg duration-[0.4s] ease-in transition bg-black p-[15px] pt-10 lg:max-w-[400px]">
               <MdOutlineNoFood className='text-5xl mb-3'/>
               <div>
                   <h1 className='text-xl font-bold mb-4'>Halal Ingridients</h1>
@@ -65,7 +65,7 @@ const Options = () => {
               </div>
               
             </div>
-            <div className="menuItem hover:translate-y-[-2px] rounded-lg duration-[0.4s] ease-in transition bg-black p-[15px] pt-10 lg:max-w-[400px]">
+            <div className="menuItem hover:translate-y-[-2px]  bg-gradient-to-r to-gray-950 from-black rounded-lg duration-[0.4s] ease-in transition bg-black p-[15px] pt-10 lg:max-w-[400px]">
               <MdOutlineFastfood className='text-5xl mb-3'/>
               <div>
                   <h1 className='text-xl font-bold mb-4'>Local Products</h1>
