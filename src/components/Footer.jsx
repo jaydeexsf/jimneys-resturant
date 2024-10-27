@@ -12,30 +12,36 @@ function Footer() {
         
         {/* Quick Links Section */}
         <div className="links">
-          <h1 className="mb-2 text-start text-red-700 text-md">Quick Links</h1>
-          <div className="text-xs space-y-2">
+          <h1 className="mb-2 text-start text-red-700 text-md lg:text-lg">Quick Links</h1>
+          <div className="text-xs lg:text-sm space-y-2">
             <Link to="/jimneys-resturant">
-              <div className="flex items-center justify-cente justify-start">
+              <div className="flex items-center justify-start">
                 <IoIosArrowForward className="mr-2" />
                 <span className="hover:text-gray-400">Home</span>
               </div>
             </Link>
             <Link to="/jimneys-resturant/location">
-              <div className="flex items-center justify-cente justify-start">
+              <div className="flex items-center justify-start">
                 <IoIosArrowForward className="mr-2" />
                 <span className="hover:text-gray-400">Location</span>
               </div>
             </Link>
             <Link to="/jimneys-resturant/menu">
-              <div className="flex items-center justify-cente md:justify-start">
+              <div className="flex items-center justify-start">
                 <IoIosArrowForward className="mr-2" />
                 <span className="hover:text-gray-400">Menu</span>
               </div>
             </Link>
             <Link to="/jimneys-resturant/order">
-              <div className="flex items-center justify-cente md:justify-start">
+              <div className="flex items-center justify-start">
                 <IoIosArrowForward className="mr-2" />
                 <span className="hover:text-gray-400">Order</span>
+              </div>
+            </Link>
+            <Link to="/jimneys-resturant/admin">
+              <div className="flex items-center justify-start">
+                <IoIosArrowForward className="mr-2" />
+                <span className="hover:text-gray-400">Admin</span>
               </div>
             </Link>
           </div>
@@ -43,31 +49,31 @@ function Footer() {
 
         {/* Contact Us Section */}
         <div className="contact">
-          <h1 className="text-red-700 text-center text-md">Contact Us</h1>
+          <h1 className="text-red-700 text-md lg:text-lg text-center">Contact Us</h1>
           <div className="flex justify-center gap-4 mt-2">
             <a href="https://mail.google.com/mail" target="_blank" rel="noopener noreferrer" className="hover:text-red-500">
-              <AiOutlineMail size={15} />
+              <AiOutlineMail size={20} />
             </a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-red-500">
-              <FaInstagram size={15} />
+              <FaInstagram size={20} />
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-red-500">
-              <FaLinkedinIn size={15} />
+              <FaLinkedinIn size={20} />
             </a>
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="hover:text-red-500">
-              <FaXTwitter size={15} />
+              <FaXTwitter size={20} />
             </a>
           </div>
         </div>
 
         {/* Services Section */}
         <div className="service md:ml-8">
-          <h1 className="mb-2 text-red-700 text-md">Our Services</h1>
-          <p className="text-xs">We ensure that you always have halal meals so that you can gain the akhira.</p>
+          <h1 className="mb-2 text-red-700 text-md lg:text-lg">Our Services</h1>
+          <p className="text-xs lg:text-sm">We ensure that you always have halal meals so that you can gain the akhira.</p>
         </div>
       </div>
 
-      <div className="text-[10px] mt-6 text-center">&copy; 2024 Jimneys Restaurant</div>
+      <div className="text-[10px] lg:text-xs mt-6 text-center">&copy; 2024 Jimneys Restaurant</div>
       {/* <div className="text-xs mt-2 text-center">
         Developed by 
         <a 

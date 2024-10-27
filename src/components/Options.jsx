@@ -1,107 +1,58 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Link } from 'react-router-dom';
 import { IoFastFoodOutline } from "react-icons/io5";
-import { MdOutlineNoFood } from "react-icons/md";
-import { MdOutlineFastfood } from "react-icons/md";
-
-
-
-
+import { MdOutlineNoFood, MdOutlineFastfood } from "react-icons/md";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
 const Options = () => {
-  // const menuRef = useRef(null);
-
-  // useEffect(() => {
-  //   gsap.to(menuRef.current.children, {
-  //     scrollTrigger: {
-  //       trigger: menuRef.current,
-  //       start: 'bottom 80%',
-  //       scrub: true, // Trigger animation when the top of the element hits 80% of the viewport height
-  //       // End the animation when the bottom of the element hits the top of the viewport
-  //       // scrub: false, // Smooth animation as you scroll
-  //      // Uncomment this line to visualize scrollTrigger markers (for debugging)
-  //     },
-  //     duration: 6,
-  //     opacity: 0.8,
-  //     scale: 1.1,
-  //     ease: 'back.out(1.7)',
-  //     stagger: 0.3 // Adjusted for smoother stagger effect
-  //   });
-  // }, []);
-
   return (
-    <section className='flex lg:h-[600px]  flex-col gap-4 md:mt-[50px] mt-[100px] items-center justify-center' id='menuSe'>
+    <section className='flex lg:h-[600px] flex-col gap-4 md:mt-[50px] mt-[100px] items-center justify-center' id='menuSe'>
       <div className='flex flex-col gap-1 text-center'>
-        <h2 className='text-red-600 font-semibold text-xl font-mono mb'>Explore</h2>
-        <h1 className='text-white font-bold text-3xl mb-6'>Menu Features</h1>
+        <h2 className='text-red-600 font-semibold text-lg md:text-xl font-mono mb'>Explore</h2>
+        <h1 className='text-white font-bold text-2xl md:text-3xl mb-6'>Menu Features</h1>
       </div>
-        <div className='grid lg:grid-cols-4 grid-cols-2 mx-auto gap-2 px-[10px]'>
-            <div className="menuItem bg-gradient-to-r to-gray-950 from-black opacity pointer-events-none hover:translate-y-[-2px] rounded-lg duration-[0.4s] ease-in transition bg-black p-[15px] pt-10 lg:max-w-[400px]">
-                <IoFastFoodOutline className='text-5xl mb-3'/>
-                <div>
-                  <h1 className='text-xl font-bold mb-4'>Always Fresh</h1>
-                  <p className='opacity-70 text-sm'>We focus on serving fresh food always. Fresh food is always best for your precious body and we keep that in mind and that's why we like to serve everything fresh</p>
-                </div>
-                                    
-            </div>
-            <div className="menuItem hover:translate-y-[-2px]  bg-gradient-to-r to-gray-950 from-black rounded-lg duration-[0.4s] ease-in transition bg-black p-[15px] pt-10 lg:max-w-[400px]">
-              <MdOutlineFastfood className='text-5xl mb-3'/>
-              <div>
-                  <h1 className='text-xl font-bold mb-4'>Amazing Taste</h1>
-                  <p  className='opacity-70 text-sm'>Serving tasty food has always been our first priority and also to make sure the taste is constant everytime you consume, you will see no rounded-lgifference in taste</p>
-              </div>
-                
-            </div>
-            <div className="menuItem hover:translate-y-[-2px]  bg-gradient-to-r to-gray-950 from-black rounded-lg duration-[0.4s] ease-in transition bg-black p-[15px] pt-10 lg:max-w-[400px]">
-              <MdOutlineNoFood className='text-5xl mb-3'/>
-              <div>
-                  <h1 className='text-xl font-bold mb-4'>Halal Ingridients</h1>
-                  <p  className='opacity-70 text-sm'>We know great ingredients are must to take the taste and health on next level, but most importanlty to get the akhira. So that's why we focus on using Halal oragnic ingredients so you don't have to worry</p>
-              </div>
-              
-            </div>
-            <div className="menuItem hover:translate-y-[-2px]  bg-gradient-to-r to-gray-950 from-black rounded-lg duration-[0.4s] ease-in transition bg-black p-[15px] pt-10 lg:max-w-[400px]">
-              <MdOutlineFastfood className='text-5xl mb-3'/>
-              <div>
-                  <h1 className='text-xl font-bold mb-4'>Local Products</h1>
-                  <p  className='opacity-70 text-sm'>Serving tasty food has always been our first priority and also to make sure the taste is constant everytime you consume, you will see no rounded-lgifference in taste</p>
-              </div>
-                
-            </div>
+      <div className='grid lg:grid-cols-4 grid-cols-2 mx-auto gap-2 px-[10px]'>
+        <div className="menuItem bg-gradient-to-r to-gray-950 from-black opacity pointer-events-none hover:translate-y-[-2px] rounded-lg duration-[0.4s] ease-in transition bg-black p-[10px] pt-4 lg:max-w-[400px]">
+          <IoFastFoodOutline className='text-3xl md:text-5xl mb-1'/>
+          <div>
+            <h1 className='text-lg md:text-xl font-bold mb-1 md:mb-4'>Always Fresh</h1>
+            <p className='opacity-70 text-[10px] md:text-sm'>We focus on serving fresh food always. Fresh food is always best for your precious body and we keep that in mind and that's why we like to serve everything fresh.</p>
+          </div>
         </div>
-        <div className='pb-10'>
-        <Link to="/jimneys-resturant/menu"><button className='bg-red-700 hover:shadow-md hover:shadow-red-600 hover:bg-black hover:border-red-600 hover:text-red-600 duration-500 transition-all py-2 text-black font-mono px-8 text-[17px] font-semibold'>See Menu</button></Link>
+        <div className="menuItem hover:translate-y-[-2px] bg-gradient-to-r to-gray-950 from-black rounded-lg duration-[0.4s] ease-in transition bg-black p-[10px] pt-4 lg:max-w-[400px]">
+          <MdOutlineFastfood className='text-3xl md:text-5xl mb-1'/>
+          <div>
+            <h1 className='text-lg md:text-xl font-bold mb-1 md:mb-4'>Amazing Taste</h1>
+            <p className='opacity-70 text-[10px] md:text-sm'>Serving tasty food has always been our first priority and also to make sure the taste is consistent every time you consume it, you will see no difference in taste.</p>
+          </div>
         </div>
+        <div className="menuItem hover:translate-y-[-2px] bg-gradient-to-r to-gray-950 from-black rounded-lg duration-[0.4s] ease-in transition bg-black p-[10px] pt-4 lg:max-w-[400px]">
+          <MdOutlineNoFood className='text-3xl md:text-5xl mb-1'/>
+          <div>
+            <h1 className='text-lg md:text-xl font-bold mb-1 md:mb-4'>Halal Ingredients</h1>
+            <p className='opacity-70 text-[10px] md:text-sm'>We know great ingredients are a must to take taste and health to the next level, and most importantly, to consider the Akhira. That's why we focus on using Halal, organic ingredients so you don’t have to worry.</p>
+          </div>
+        </div>
+        <div className="menuItem hover:translate-y-[-2px] bg-gradient-to-r to-gray-950 from-black rounded-lg duration-[0.4s] ease-in transition bg-black p-[10px] pt-4 md:pt-4 lg:max-w-[400px]">
+          <MdOutlineFastfood className='text-3xl md:text-5xl mb-1'/>
+          <div>
+            <h1 className='text-md md:text-xl font-bold mb-1 md:mb-4'>Local Products</h1>
+            <p className='opacity-70 text-[10px] md:text-sm'>Using local products ensures freshness and supports our community. This commitment helps us deliver the best quality to our customers.</p>
+          </div>
+        </div>
+      </div>
+      <div className='pb-12 md:pb-6 pt-8'>
+        <Link to="/jimneys-resturant/menu">
+          <button className='bg-red-700 hover:shadow-md hover:shadow-red-600 hover:bg-black hover:border-red-600 hover:text-red-600 duration-500 transition-all py-2 md:py-3 text-black font-mono px-8 md:px-12 text-sm md:text-[18px] font-semibold'>
+            See Menu
+          </button>
+        </Link>
+      </div>
     </section>
-  
-    // <div
-    //   ref={menuRef}
-    //   className="flex flex-wrap justify-center mt-[-50px] bg-gray-900 p-5 min-h-[550px]"
-    // >
-    //   {['Breakfast', 'Lunch', 'Dinner'].map((item, index) => (
-    //     <div
-    //       key={index}
-    //       className="relative flex gap-6 flex-col justify-around items-center m-5"
-    //     >
-    //       <h1 className="text-2xl">{item}</h1>
-    //       <div className="flex flex-col gap-6 items-center justify-center">
-    //         <img
-    //           src={`src/assets/images/${item.toLowerCase()}.jpg`}
-    //           alt={item}
-    //           className="sm:w-[360px] md:w-48 xl:w-[400px] h-72 object-cover border-2 border-white rounded-md"
-    //         />
-    //         <Link to="menu"><button className="text-sm transition-transform transform hover:text-red-700 hover:scale-105 hover:bg-white bg-red-600 text-white px-3 py-2 rounded-[2px]">
-    //           Check Menu
-    //         </button></Link>
-    //       </div>  
-    //     </div>
-    //   ))}
-    // </div>
   );
 };
 

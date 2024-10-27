@@ -6,6 +6,7 @@ import { Contact } from '../components/Contact';
 import { AboutUs } from '../components/AboutUs';
 import Footer from '../components/Footer';
 import Options from '../components/Options';
+import Location from './Location'
 
 const Home = () => {
   return (
@@ -24,6 +25,7 @@ const Home = () => {
           ))}
         </div>    */}
       </section>
+      <Location />
       {/* <Footer /> */}
     </div>
   );

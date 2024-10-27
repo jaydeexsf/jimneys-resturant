@@ -81,10 +81,13 @@ export const Admin = () => {
 
     return (
         <>
-            <div className={`${isDeleting ?' overflow-y-none' : 'overflow-none'}  bg-gray-900 min-h-screen flex flex-col items-center text-white`}>
-                <div className="flex justify-between items-center mb-8 mt-3 w-full px-8">
-                    <h1 className='text-[30px] mt-2 font-bold'>Manage Products</h1>
-                    <Link to="/jimneys-resturant/add-product"><button className='bg-black px-4 py-3 hover:bg-sky-900 font-semibold text-sm rounded-md'>Add New Product</button></Link>
+            <div className={`${isDeleting ?' overflow-y-none' : 'overflow-none'}  bg-gray-900 min-h-screen pb-8 flex flex-col items-center text-white`}>
+                {/* <div className="flex justify-between items-center mb-8 mt-3 w-full px-8">
+                </div> */}
+                <div className='flex items-center justify-between mt-4 mb-4 w-full px-8'> 
+                    <h1 className='text-2xl font-semibold'>Manage Products</h1>
+                    <span><Link to="/jimneys-resturant/add-product"><button className='bg-white text-slate-900 hover:text-white px-3 py-2 hover:bg-indigo-900 font-semibol text-xs rounded-md'>Add Product</button></Link>
+                    </span>
                 </div>
                 <div className="flex gap-4 mt-4 mb-6">
                     {["All", "Breakfast", "Lunch", "Dinner"].map((category) => (

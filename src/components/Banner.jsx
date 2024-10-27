@@ -55,7 +55,7 @@ const Banner = () => {
   seet();
 
   return (
-    <section style={Swindow < 1535 ? backgroundImageStyle : bimstyle} className="xl:bg-none	 bg-black min-h-[250px] flex flex-start w-[100%] h-[65hvh] text-white py-20">
+    <section style={Swindow < 1535 ? backgroundImageStyle : bimstyle} className="xl:bg-none	 bg-black min-h-[350px] md:min-h-[450px] flex flex-start w-[100%] h-[65hvh] text-white py-20">
       <div className="container2 2xl:flex 2xl:justify-center h-[0vh] hidden md:block xl:mb-[300px] 2xl:w-[100%] items-center 2xl:flex-col w-[40vw] mx-[5vw]">
         <h1 className="text-[45px] md:whitespace-nowrap font-medium mt-2 mb-4">Freshness in <span className="text-red-700">Every</span> Bite</h1>
         <p className="mb-8 text-sm 2xl:w-[50vw] 2xl:text-center">
