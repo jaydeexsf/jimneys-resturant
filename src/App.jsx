@@ -23,7 +23,7 @@ function App() {
           <main className=''>
             <Routes>
               <Route path='/jimneys-resturant/' element={<Home />}/>
-              <Route path='/jimneys-resturant/' element={<Home />}/>
+              <Route path='/' element={<Home />}/>
               <Route path="/jimneys-resturant/menu" element={<Menu />} />
               {/* <Route path='/about' element={<About />}/> */}
               <Route path='/jimneys-resturant/order' element={<Order />}/>
