@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import data from '../database/index';
+// import data from '../database/index';
 // import { Contact } from './Contact';
 // import Contact from '../components/Contact';
 import { Button } from './Button';
 import { Button2 } from './Button2';
 import { Button4 } from './Button4';
+import briyani from '../assets/images/Chicken-Briyani.jpg'
 
 const Banner = () => {
 
@@ -23,7 +24,7 @@ const Banner = () => {
 
   
   const bimstyle = {
-    background: `url(${data[4].imageUrl})`,
+    background: `url(${briyani})`,
     backgroundSize: '',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
