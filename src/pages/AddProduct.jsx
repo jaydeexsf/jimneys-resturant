@@ -1,7 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { db, storage } from '../firebase';
 import { collection, addDoc } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { PiImagesSquareLight } from 'react-icons/pi';
+import { MdCancel } from "react-icons/md";
+import { IoMdCheckmark } from "react-icons/io";
+
+
 
 const AddProduct = () => {
     const [name, setName] = useState('');
@@ -14,30 +19,29 @@ const AddProduct = () => {
     const [category, setCategory] = useState('');
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
+    const [message, setMessage] = useState('my name is moloantoa');
 
     const handleImageChange = (e) => {
         const file = e.target.files[0];
         if (file) {
             setImageFile(file);
-            setPreviewImage(URL.createObjectURL(file));
+            setPreviewImage(URL.createObjectURL(file)); 
         }
     };
 
     const handleAddProduct = async (e) => {
         e.preventDefault();
         setLoading(true);
-        setError('');
+        setError(''); 
 
         try {
-            // Upload the image to Firebase Storage
             const imageRef = ref(storage, `productImages/${imageFile.name}`);
             await uploadBytes(imageRef, imageFile);
-            const imageUrl = await getDownloadURL(imageRef);
+            const imageUrl = await getDownloadURL(imageRef); 
 
-            // Create a new product object
             const newProduct = {
                 name,
-                imageUrl,
+                imageUrl: imageUrl,
                 description,
                 originalPrice: Number(originalPrice),
                 currentPrice: Number(currentPrice),
@@ -45,13 +49,13 @@ const AddProduct = () => {
                 category,
             };
 
-            // Save the product to Firestore
             await addDoc(collection(db, "products"), newProduct);
+            setMessage('Product added sucesfully')
             console.log('New product added:', newProduct);
-            resetForm();
+            resetForm(); 
         } catch (err) {
             console.error('Error adding product:', err);
-            setError('Failed to add product. Please try again.');
+            setError('Failed to add product. Please try again.'); 
         } finally {
             setLoading(false);
         }
@@ -68,11 +72,32 @@ const AddProduct = () => {
         setCategory('');
     };
 
+    useEffect(()=>{
+        if(message){
+            setTimeout(() => {
+                setMessage('')
+            }, 40000);
+        }
+    }, [message])
+
     return (
         <div className="bg-gray-900 min-h-screen flex flex-col items-center text-white p-8">
-            <h1 className="text-2xl md:text-3xl font-bold mb-6">Add New Product</h1>
+            <div className='fixed top-[90px] left-[50%] z-[1000000] w-full translate-x-[-50%]'>
+                {message ? 
+                <div className='relative w-fit'>
+                    <div className='bg-red-600/90 flex gap-1 items-center pr-8 pl-2 py-2 rounded text-white text-md font-' > <span > <IoMdCheckmark size={20} className="text-green-600 font-bold" />
+                    </span> <span className='text-green-200'>{message}</span> <span className='absolute top-0 right-1'><button onClick={()=> setMessage('')}><MdCancel size={20}/>
+</button></span> </div>
+                    
+                </div>    
+            :
+            ''
+            }
+
+            </div>
+            <h1 className="text-2xl md:text-3xl font-bold mb-6">Add New Product </h1>
             <form onSubmit={handleAddProduct} className="bg-gray-800 p-3 text-sm rounded-md w-full max-w-md">
-                {error && <p className="text-red-500 mb-4">{error}</p>}
+                {error && <p className="text-red-500 mb-4">{error}</p>} {/* Display error message */}
                 <input
                     type="text"
                     placeholder="Product Name"
@@ -124,11 +149,10 @@ const AddProduct = () => {
                     disabled={loading}
                     className="border border-gray-700 bg-gray-900 text-white rounded-md p-2 mb-2 w-full"
                 />
-
                 <div className="mt-4">
                     <label className="text-gray-400 text-sm">Upload Product Image</label>
                     <input
-                     disabled={loading}
+                        disabled={loading}
                         type="file"
                         accept="image/*"
                         onChange={handleImageChange}
@@ -138,7 +162,6 @@ const AddProduct = () => {
                         <img src={previewImage} alt="Preview" className="mt-4 w-full h-48 object-cover rounded-md" />
                     )}
                 </div>
-
                 <button
                     type="submit"
                     disabled={loading}
@@ -146,7 +169,8 @@ const AddProduct = () => {
                         loading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-red-700'
                     }`}
                 >
-                  {loading ?  <div className="border-gray-500 border-t-black border-2 rounded-full w-4 h-4 animate-spin"></div> : ''} {loading ? 'Adding...' : 'Add Product'}
+                    {loading ?  <div className="border-gray-500 border-t-black border-2 rounded-full w-4 h-4 animate-spin"></div> : ''} 
+                    {loading ? 'Adding...' : 'Add Product'}
                 </button>
             </form>
         </div>
