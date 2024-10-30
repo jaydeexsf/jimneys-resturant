@@ -8,13 +8,21 @@ export const Menu = () => {
     const [products, setProducts] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState("All");
     const [activeButton, setActiveButton] = useState("All");
+    const [loading, setLoading] = useState(false)
 
     useEffect(() => {
         const fetchProducts = async () => {
+            try {
+            setLoading(true)
             const productsCollection = collection(db, 'products'); // Use the name of your Firestore collection
             const productsSnapshot = await getDocs(productsCollection);
             const productsList = productsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
             setProducts(productsList);
+            } catch (err) {
+            console.log(err)
+            } finally {
+            setLoading(false)
+            }
         };
 
         fetchProducts();
@@ -63,6 +71,7 @@ export const Menu = () => {
                 {filteredProducts.map((item) => (
                     <MenuItem key={item.id} description={true} item={item} />
                 ))}
+                {loading && <div className="w-16 h-16 border-gray-400 rounded-full border-t-transparent border-4 animate-spin"></div>}
             </div>
         </div>
     );
