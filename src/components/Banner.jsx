@@ -46,7 +46,7 @@ const Banner = () => {
   // seet();
 
   const backgroundImageStyle = {
-    background: Swindow > 790 ? `url(${data[4].imageUrl})` : ``,
+    background: Swindow > 790 ? `url(${briyani})` : ``,
     backgroundSize: '', // or 'contain' based on your needs
     backgroundPosition: 'right',
     backgroundRepeat: 'no-repeat',
