@@ -10,7 +10,6 @@ function Footer() {
     <div className="flex flex-col items-center py-6 bg-black text-white">
       <div className="grid grid-cols-3 md:grid-cols-3 gap-6 w-full max-w-4xl px-4 text-center md:text-left">
         
-        {/* Quick Links Section */}
         <div className="links">
           <h1 className="mb-2 text-start text-red-700 text-md lg:text-lg">Quick Links</h1>
           <div className="text-xs lg:text-sm space-y-2">

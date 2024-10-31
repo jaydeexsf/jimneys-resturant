@@ -7,12 +7,14 @@ import { AboutUs } from '../components/AboutUs';
 import Footer from '../components/Footer';
 import Options from '../components/Options';
 import Location from './Location'
+import SpecialDeals from './SpecialDeals';
 
 const Home = () => {
   return (
     <div className='bg-gray-900 text-white'>
       <Banner />
       <Contact/>
+      <SpecialDeals />
       <AboutUs />
       <section className="container mx-auto  mt-[-90px]">
         {/* <h2 className="text-3xl text-center mb-16 italic text-red-700 font-bold">Menu</h2> */}

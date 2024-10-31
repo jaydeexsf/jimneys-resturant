@@ -7,9 +7,9 @@ const Location = () => {
   }, [])
 
   return (
-    <div className="flex bg-gradient-to-b from-slate-950 to-gray-900 flex-col items-center py-[30px] min-h-screen bg-gray-950 p-6">
-      <h1 className="text-3xl font-bold text-gray-100 mb-6">Find Us</h1>
-      <p className="text-md text-center text-gray-400 mb-6">
+    <div className="flex bg-gradient-to-b from-slate-900/90 to-gray-900 flex-col items-center py-[30px] min-h- bg-gray-950 p-6">
+      <h1 className="text-3xl font-bold md:text-4xl text-gray-100 mb-6">Find Us</h1>
+      <p className="text-sm text-center text-gray-400 mb-6">
         Visit us at our location for the best fish and chips in town. Below is our precise location on Google Maps.
       </p>
       <div className="w-full max-w-4xl bg-white shadow-lg rounded-lg overflow-hidden">

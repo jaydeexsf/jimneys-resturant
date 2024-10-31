@@ -180,7 +180,7 @@ export const Admin = () => {
                     <h1 className='text-2xl font-semibold'>Manage Products</h1>
                     <span>
                         <Link to="/add-product">
-                            <button className='bg-white text-slate-900 hover:text-white px-3 py-2 hover:bg-indigo-900 font-semibold text-xs rounded-md'>
+                            <button className='bg-white text-slate-900 hover:text-white px-4 py-3 hover:bg-indigo-900 font-semibold text-xs rounded-md'>
                                 Add Product
                             </button>
                         </Link>

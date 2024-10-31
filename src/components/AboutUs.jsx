@@ -53,7 +53,7 @@ export const AboutUs = () => {
       </div>
       <div  className=" flex flex-col md:flex-row items-center justify-center md:gap-[100px] pb- px-6 md:px-12">
     
-      <div className="absolute inset-0 bg-gradient-to-b to-gray-900 from-black opacity-90 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-b to-slate-900/90 from-black pointer-events-none"></div>
 
       {/* Restaurant Motto Section */}
       {/* <div className="absolute top-4 hidden md:bloc text-center text-lg font-semibold text-red-500">
