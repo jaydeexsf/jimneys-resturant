@@ -12,6 +12,7 @@ import Login from './pages/Admin/Login';
 import Admin from './pages/Admin/Admin';
 import Footer from './components/Footer';
 import AddProduct from './pages/AddProduct';
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
   return (
@@ -22,15 +23,25 @@ function App() {
           {/* <Home /> */}
           <main className=''>
             <Routes>
-              <Route path='/jimneys-resturant/' element={<Home />}/>
               <Route path='/' element={<Home />}/>
-              <Route path="/jimneys-resturant/menu" element={<Menu />} />
+              <Route path='/' element={<Home />}/>
+              <Route path="/menu" element={<Menu />} />
               {/* <Route path='/about' element={<About />}/> */}
-              <Route path='/jimneys-resturant/order' element={<Order />}/>
-              <Route path='/jimneys-resturant/location' element={<Location />} />
-              <Route path='/jimneys-resturant/login' element={<Login />} />
-              <Route path='/jimneys-resturant/admin' element={<Admin />} />
-              <Route path='/jimneys-resturant/add-product' element={<AddProduct />} />
+              <Route path='/order' element={<Order />}/>
+              <Route path='/location' element={<Location />} />
+              <Route path='/login' element={<Login />} />
+              <Route path="/admin" element={
+                <ProtectedRoute>
+                  <Admin />
+                </ProtectedRoute>
+              }
+            />
+            <Route path="/add-product" element={
+                <ProtectedRoute>
+                  <AddProduct />
+                </ProtectedRoute>
+              }
+            />
             </Routes>
           </main>
           <Footer />

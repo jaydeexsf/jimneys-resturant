@@ -85,6 +85,10 @@ const AddProduct = () => {
         }
     }, [message]);
 
+    useEffect(()=> {
+        window.scrollTo(0, 0)
+      }, [])
+
     return (
         <div className="bg-gray-900 min-h-screen flex flex-col items-center text-white p-8">
             <div className='fixed top-[90px] ml-8 left-[50%] z-[1000000] w-full translate-x-[-50%]'>
@@ -106,7 +110,7 @@ const AddProduct = () => {
             </div>
 
             <div className='absolute top-[120px] left-[2%] bg-red-600 flex justify-center items-center px-4 py-1 rounded-full'>
-                <Link to="/jimneys-resturant/admin">Back</Link>
+                <Link to="/admin">Back</Link>
             </div>
 
             <h1 className="text-xl md:text-2xl font-bold mb-6">Add New Product</h1>

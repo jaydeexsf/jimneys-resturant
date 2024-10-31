@@ -42,6 +42,10 @@ export const Menu = () => {
         }
     };
 
+    useEffect(()=> {
+        window.scrollTo(0, 0)
+      }, [])
+
     return (
         <div className='bg-gray-900 min-h-[100vh] flex py-[10px] mx-auto flex-col items-center h-full text-white'>
             <h1 className='flex text-3xl font-bold w-full justify-center text-center mb-8'>Menu</h1>

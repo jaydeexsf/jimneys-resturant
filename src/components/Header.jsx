@@ -44,26 +44,26 @@ const style = 'text-red-700 underline decoration-white	decoration-4	underline-of
         
         <nav className='text-xl hidden text-end self-end md:flex'>
           <Link
-            to="/jimneys-resturant/" 
-            className={getLinkClassName('/jimneys-resturant/')}
+            to="/" 
+            className={getLinkClassName('/')}
           >
             Home
           </Link>
           <Link 
-            to="/jimneys-resturant/menu" 
-            className={getLinkClassName('/jimneys-resturant/menu')}
+            to="/menu" 
+            className={getLinkClassName('/menu')}
           >
             Menu
           </Link>
           <Link 
-            to="/jimneys-resturant/order" 
-            className={getLinkClassName('/jimneys-resturant/order')}
+            to="/order" 
+            className={getLinkClassName('/order')}
           >
             Order
           </Link>
           <Link 
-            to="/jimneys-resturant/location" 
-            className={getLinkClassName('/jimneys-resturant/location')}
+            to="/location" 
+            className={getLinkClassName('/location')}
           >
             Location
           </Link>
@@ -71,31 +71,31 @@ const style = 'text-red-700 underline decoration-white	decoration-4	underline-of
 
         <nav onClick={removemnu} className={`text-xl ${!menuvisible ? 'flex translate-x-0' : 'translate-x-[120%] hidden'} flex rounded-lg py-2 absolute top-[62px] transition duration-700 -right-[0] w-full sm:w-60 px-8 sm:px-0 bg-red-950 flex-col md:hidden`}>
           <Link 
-            to="/jimneys-resturant/" 
-            className={getLinkClassName('/jimneys-resturant/')}
+            to="/" 
+            className={getLinkClassName('/')}
           >
             Home
           </Link>
           <Link 
-            to="/jimneys-resturant/menu" 
-            className={getLinkClassName('/jimneys-resturant/menu')}
+            to="/menu" 
+            className={getLinkClassName('/menu')}
           >
             Menu
           </Link>
           <Link 
-            to="/jimneys-resturant/order" 
-            className={getLinkClassName('/jimneys-resturant/order')}
+            to="/order" 
+            className={getLinkClassName('/order')}
           >
             Order
           </Link>
           <Link 
-            to="/jimneys-resturant/location" 
-            className={getLinkClassName('/jimneys-resturant/location')}
+            to="/location" 
+            className={getLinkClassName('/location')}
           >
             Location
           </Link>
         </nav>
-        <button onClick={showmenu}  > {menuvisible ? <CiMenuBurger className='text-gray-200 text-3xl md:hidden hover:cursor-pointer flex'/> : <GiCancel  className='text-gray-200 text-3xl md:hidden hover:cursor-pointer flex'/> }</button> 
+        <button onClick={showmenu} className="md:hidden block"  > {menuvisible ? <CiMenuBurger className='text-gray-200 text-3xl md:hidden hover:cursor-pointer flex'/> : <GiCancel  className='text-gray-200 text-3xl md:hidden hover:cursor-pointer flex'/> }</button> 
       </div>
     </header>
   );

@@ -46,7 +46,7 @@ const Options = () => {
         </div>
       </div>
       <div className='pb-12 md:pb-6 pt-8'>
-        <Link to="/jimneys-resturant/menu">
+        <Link to="/menu">
           <button className='bg-red-700 hover:shadow-md hover:shadow-red-600 hover:bg-black hover:border-red-600 hover:text-red-600 duration-500 transition-all py-2 md:py-3 text-black font-mono px-8 md:px-12 text-sm md:text-[18px] font-semibold'>
             See Menu
           </button>

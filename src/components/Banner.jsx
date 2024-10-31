@@ -63,8 +63,8 @@ const Banner = () => {
         At Jimney's Fish & Chips, we bring you a delightful harmony of timeless flavors infused with contemporary culinary flair. Nestled conveniently in the vibrant heart of Mankweng, adjacent to the University of Limpopo and just a stone's throw from the local garage, our restaurant stands as a beacon of exceptional taste and warm hospitality.
         </p>
         <div className="flex">
-          <Link to="/jimneys-resturant/order">{Swindow < 1535 ? <Button fist={"Order Now"} second={"Thank Us Later"} /> : <Button4 fist={'Order now'} second={"Thank Us Later"}/>}</Link>
-          <Link to="/jimneys-resturant/menu"><Button2 fist={"View Menu"}/></Link>
+          <Link to="/order">{Swindow < 1535 ? <Button fist={"Order Now"} second={"Thank Us Later"} /> : <Button4 fist={'Order now'} second={"Thank Us Later"}/>}</Link>
+          <Link to="/menu"><Button2 fist={"View Menu"}/></Link>
         </div>
       </div>
 
@@ -73,8 +73,8 @@ const Banner = () => {
          <h1 className="text-[40px] text-center font-medium mb-">Freshness in <span className="text-red-700 text-center">Every</span> Bite</h1>
           <p className='mt-[20px] font-semibold px-[40px]'>At Jimney's Fish & Chips, we bring you a delightful harmony of timeless flavors infused with contemporary culinary flair.  Nestled conveniently in the vibrant heart of Mankweng, adjacent to the University of Limpopo and just a stone's throw from the local garage.</p>
           <div className='mt-4'>
-             <Link to="/jimneys-resturant/order"><button className='bg-white hover:bg-red-700 rounded-sm hover:border-red-600 duration-500 transition-all whitespace-nowrap py-2 text-red-700 hover:text-white font-mono px-6 text-sm font-semibold'>Order Now</button></Link>
-             <Link to="/jimneys-resturant/menu"><button className='bg-red-700 ml-6 hover:bg-white rounded-sm hover:border-red-600 duration-500 transition-all whitespace-nowrap py-2 text-white hover:text-red-700 font-mono px-6 text-sm font-semibold'>View Menu</button></Link>
+             <Link to="/order"><button className='bg-white hover:bg-red-700 rounded-sm hover:border-red-600 duration-500 transition-all whitespace-nowrap py-2 text-red-700 hover:text-white font-mono px-6 text-sm font-semibold'>Order Now</button></Link>
+             <Link to="/menu"><button className='bg-red-700 ml-6 hover:bg-white rounded-sm hover:border-red-600 duration-500 transition-all whitespace-nowrap py-2 text-white hover:text-red-700 font-mono px-6 text-sm font-semibold'>View Menu</button></Link>
           </div>
       </div>
     </section>

@@ -14,31 +14,31 @@ function Footer() {
         <div className="links">
           <h1 className="mb-2 text-start text-red-700 text-md lg:text-lg">Quick Links</h1>
           <div className="text-xs lg:text-sm space-y-2">
-            <Link to="/jimneys-resturant">
+            <Link to="/">
               <div className="flex items-center justify-start">
                 <IoIosArrowForward className="mr-2" />
                 <span className="hover:text-gray-400">Home</span>
               </div>
             </Link>
-            <Link to="/jimneys-resturant/location">
+            <Link to="/location">
               <div className="flex items-center justify-start">
                 <IoIosArrowForward className="mr-2" />
                 <span className="hover:text-gray-400">Location</span>
               </div>
             </Link>
-            <Link to="/jimneys-resturant/menu">
+            <Link to="/menu">
               <div className="flex items-center justify-start">
                 <IoIosArrowForward className="mr-2" />
                 <span className="hover:text-gray-400">Menu</span>
               </div>
             </Link>
-            <Link to="/jimneys-resturant/order">
+            <Link to="/order">
               <div className="flex items-center justify-start">
                 <IoIosArrowForward className="mr-2" />
                 <span className="hover:text-gray-400">Order</span>
               </div>
             </Link>
-            <Link to="/jimneys-resturant/admin">
+            <Link to="/admin">
               <div className="flex items-center justify-start">
                 <IoIosArrowForward className="mr-2" />
                 <span className="hover:text-gray-400">Admin</span>

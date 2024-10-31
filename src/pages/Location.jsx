@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const Location = () => {
+
+  useEffect(()=> {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div className="flex bg-gradient-to-b from-slate-950 to-gray-900 flex-col items-center py-[30px] min-h-screen bg-gray-950 p-6">
       <h1 className="text-3xl font-bold text-gray-100 mb-6">Find Us</h1>

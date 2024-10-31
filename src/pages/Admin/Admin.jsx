@@ -2,13 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { FaEdit, FaTrash } from 'react-icons/fa';
 import MenuItem from '../../components/MenuItem';
 import Button3 from '../../components/Button3';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { db, storage } from '../../firebase';
 // import { collection, addDoc } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { collection, getDocs, doc, updateDoc, deleteDoc } from "firebase/firestore";
 import { MdCancel } from "react-icons/md";
 import { IoMdCheckmark } from "react-icons/io";
+import { getAuth, signOut } from "firebase/auth"; // Import Firebase signOut function
+
 
 export const Admin = () => {
     const [products, setProducts] = useState([]); //this is from firebase
@@ -27,6 +29,7 @@ export const Admin = () => {
     const [previewImage, setPreviewImage] = useState('');
     const [message, setMessage] = useState('');
     const [loading, setLoading] = useState(false);
+    const navigate = useNavigate(); // For navigation
 
     const fetchProducts = async () => {
         setLoading(true);
@@ -117,6 +120,16 @@ export const Admin = () => {
             setMessage("Couldn't update product...try again");
         }
     };
+
+    const handleLogout = async () => {
+        const auth = getAuth();
+        try {
+            await signOut(auth);
+            navigate("/login"); // Redirect to login page after logout
+        } catch (error) {
+            console.error("Logout failed", error);
+        }
+    };
     
 
     const handleDeleteProduct = async () => {
@@ -143,6 +156,10 @@ export const Admin = () => {
         }
     }, [message])
 
+    useEffect(()=> {
+        window.scrollTo(0, 0)
+      }, [])
+
     return (
         <>
             <div className={`${isDeleting ? 'overflow-y-none' : 'overflow-none'} bg-gray-900 min-h-screen pb-8 flex flex-col items-center text-white`}>
@@ -162,11 +179,17 @@ export const Admin = () => {
                 <div className='flex items-center justify-between mt-4 mb-4 w-full px-8'> 
                     <h1 className='text-2xl font-semibold'>Manage Products</h1>
                     <span>
-                        <Link to="/jimneys-resturant/add-product">
+                        <Link to="/add-product">
                             <button className='bg-white text-slate-900 hover:text-white px-3 py-2 hover:bg-indigo-900 font-semibold text-xs rounded-md'>
                                 Add Product
                             </button>
                         </Link>
+                        <button
+                        onClick={handleLogout}
+                        className="bg-red-600 text-white px-3 py-2 rounded-md font-semibold hover:bg-red-800"
+                    >
+                        Logout
+                    </button>
                     </span>
                 </div>
                 <div className="flex gap-4 mt-4 mb-6">
