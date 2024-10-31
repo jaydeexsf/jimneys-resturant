@@ -184,12 +184,12 @@ export const Admin = () => {
                                 Add Product
                             </button>
                         </Link>
-                        <button
+                        {/* <button
                         onClick={handleLogout}
                         className="bg-red-600 text-white px-3 py-2 rounded-md font-semibold hover:bg-red-800"
                     >
                         Logout
-                    </button>
+                    </button> */}
                     </span>
                 </div>
                 <div className="flex gap-4 mt-4 mb-6">

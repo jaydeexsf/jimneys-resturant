@@ -1,20 +1,19 @@
-// Import necessary libraries and modules 
+// Import necessary libraries and modules  
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { CiMenuBurger } from "react-icons/ci";
 import { GiCancel } from "react-icons/gi";
 import { FiSettings } from "react-icons/fi"; // Settings icon
+import { MdLogout } from "react-icons/md"; // Logout icon
 import logo from '../assets/images/PSX_20240717_161845-removebg-preview.png';
 import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
 import SettingsComponent from './SettingsComponent'; // Import new component
 
 const Header = ({ className }) => {
     const location = useLocation().pathname;
-    const [menuVisible, setMenuVisible] = useState(true);
+    const [menuVisible, setMenuVisible] = useState(false); // Default menu to hidden
     const [currentUser, setCurrentUser] = useState(null);
-    const [isShowingOptions, setIsShowingOptions] = useState(false);
-    const [isShowingSettings, setIsShowingSettings] = useState(false); 
-    // const [setIsShowingLogoutOption, setIsShowingLogoutOption] = useState(false)
+    const [isShowingSettings, setIsShowingSettings] = useState(false);
     const navigate = useNavigate();
 
     // Check for auth state
@@ -49,65 +48,59 @@ const Header = ({ className }) => {
                     Jimney's
                 </h1>
 
-                {/* Desktop Navigation */}
-                <nav className="text-xl hidden md:flex">
-                    <Link to="/" className={getLinkClassName('/')}>Home</Link>
-                    <Link to="/menu" className={getLinkClassName('/menu')}>Menu</Link>
-                    <Link to="/order" className={getLinkClassName('/order')}>Order</Link>
-                    <Link to="/location" className={getLinkClassName('/location')}>Location</Link>
-                </nav>
-
-                {/* Profile & Options */}
-                {currentUser ? 
-                <div className="relative flex items-center gap-4">
-                     {currentUser.photoURL && (
-                                <button onClick={()=> setIsShowingOptions(!isShowingOptions)}> {isShowingOptions ? <GiCancel size={32} className='hover:cursor-pointer text-white' /> : <img src={currentUser.photoURL} alt={currentUser.displayName} className="w-8 h-8 rounded-full" />}</button>
-                            )}
-                    
-                    {isShowingOptions && (
-                        <div className="bg-gray-800 p-4 rounded-md absolute top-[40px] right-0 text-white w-[230px] shadow-lg">
-                            <div className="flex flex-col items-start">
-                                <div className="flex items-center gap-2 mb-4 text-xs">
-                                 <img src={currentUser.photoURL} alt={currentUser.displayName} className="w-8 h-8 rounded-full" />
-                                  <span className="text-xs">Hi Admin, <br></br> {currentUser.displayName}</span>
-                                </div>
-                                
-                                <button 
-                                    onClick={() => setIsShowingSettings(true)}
-                                    className="flex items-center gap-2 mt-2 bg-blue-600 text-white px-3 py-2 rounded-md font-semibold hover:bg-blue-800"
-                                >
-                                    <FiSettings /> Settings
-                                </button>
-
-                                <button
-                                    onClick={handleLogout}
-                                    className="mt-2 bg-red-600 text-white px-3 py-2 rounded-md font-semibold hover:bg-red-800"
-                                >
-                                    Logout
-                                </button>
-                            </div>
-                        </div>
-                    )}
-
-                    {isShowingSettings && (
-                        <SettingsComponent 
-                            onClose={() => setIsShowingSettings(false)} 
-                        />
-                    )}
-                </div>
-                : ''}
-
                 {/* Mobile Menu Toggle Button */}
                 <button onClick={toggleMenu} className="md:hidden">
                     {menuVisible ? (
-                        <CiMenuBurger className="text-gray-200 text-3xl" />
-                    ) : (
                         <GiCancel className="text-gray-200 text-3xl" />
+                    ) : (
+                        <CiMenuBurger className="text-gray-200 text-3xl" />
                     )}
                 </button>
+
+                {/* Mobile Navigation */}
+                <div
+                    className={`absolute top-16 right-0 w-full bg-red-950 p-6 transition-transform duration-300 ${menuVisible ? 'block' : 'hidden'}`}
+                >
+                    {currentUser && (
+                        <div className="flex items-center gap-2 mb-4">
+                            <img src={currentUser.photoURL} alt={currentUser.displayName} className="w-10 h-10 rounded-full" />
+                            <span className="text-white">Hi, {currentUser.displayName}</span>
+                        </div>
+                    )}
+                    <nav className="flex flex-col mb-4">
+                        <Link to="/" className={getLinkClassName('/')}>Home</Link>
+                        <Link to="/menu" className={getLinkClassName('/menu')}>Menu</Link>
+                        <Link to="/order" className={getLinkClassName('/order')}>Order</Link>
+                        <Link to="/location" className={getLinkClassName('/location')}>Location</Link>
+                    </nav>
+                    {currentUser && (
+                        <div className="flex flex-col">
+                            <button
+                                onClick={() => setIsShowingSettings(true)}
+                                className="flex items-center gap-2 mt-2 bg-blue-600 text-white px-3 py-2 rounded-md font-semibold hover:bg-blue-800"
+                            >
+                                <FiSettings /> Settings
+                            </button>
+                            <button
+                                onClick={handleLogout}
+                                className="flex items-center gap-2 mt-2 bg-red-600 text-white px-3 py-2 rounded-md font-semibold hover:bg-red-800"
+                            >
+                                <MdLogout /> Logout
+                            </button>
+                        </div>
+                    )}
+                </div>
             </div>
+
+            {/* Show Settings Component */}
+            {isShowingSettings && (
+                <SettingsComponent 
+                    onClose={() => setIsShowingSettings(false)} 
+                />
+            )}
         </header>
     );
 };
 
 export default Header;
+
