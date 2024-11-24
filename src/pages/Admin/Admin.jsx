@@ -9,7 +9,7 @@ import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { collection, getDocs, doc, updateDoc, deleteDoc } from "firebase/firestore";
 import { MdCancel } from "react-icons/md";
 import { IoMdCheckmark } from "react-icons/io";
-import { getAuth, signOut } from "firebase/auth"; // Import Firebase signOut function
+import { getAuth, signOut } from "firebase/auth"; 
 
 
 export const Admin = () => {
